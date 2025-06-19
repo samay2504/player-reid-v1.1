@@ -20,14 +20,6 @@ wheels/
 .installed.cfg
 *.egg
 
-# Logs
-*.log
-player_reid.log
-
-# Media files
-*.mp4
-test_detections.jpg
-
 # Environment
 .env
 .venv

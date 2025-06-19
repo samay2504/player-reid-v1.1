@@ -1,0 +1,1224 @@
+2025-06-19 23:57:01,060 - __main__ - INFO - Initializing player tracker...
+2025-06-19 23:57:01,070 - __main__ - ERROR - Error during processing: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL ultralytics.nn.tasks.DetectionModel was not an allowed global by default. Please use `torch.serialization.add_safe_globals([ultralytics.nn.tasks.DetectionModel])` or the `torch.serialization.safe_globals([ultralytics.nn.tasks.DetectionModel])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2025-06-20 00:02:59,045 - __main__ - INFO - Initializing player tracker...
+2025-06-20 00:02:59,053 - __main__ - ERROR - Error during processing: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL ultralytics.nn.tasks.DetectionModel was not an allowed global by default. Please use `torch.serialization.add_safe_globals([ultralytics.nn.tasks.DetectionModel])` or the `torch.serialization.safe_globals([ultralytics.nn.tasks.DetectionModel])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2025-06-20 00:05:10,333 - __main__ - INFO - Initializing player tracker...
+2025-06-20 00:05:10,342 - __main__ - ERROR - Error during processing: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL torch.nn.modules.container.Sequential was not an allowed global by default. Please use `torch.serialization.add_safe_globals([torch.nn.modules.container.Sequential])` or the `torch.serialization.safe_globals([torch.nn.modules.container.Sequential])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2025-06-20 00:06:09,154 - __main__ - INFO - Initializing player tracker...
+2025-06-20 00:06:09,155 - tracking.tracker - INFO - Successfully patched ultralytics for PyTorch 2.6 compatibility
+2025-06-20 00:06:09,160 - __main__ - ERROR - Error during processing: No module named 'ultralytics.nn.modules.conv'; 'ultralytics.nn.modules' is not a package
+2025-06-20 00:07:26,367 - __main__ - INFO - Initializing player tracker...
+2025-06-20 00:07:26,368 - tracking.tracker - WARNING - Failed to patch ultralytics: cannot import name 'torch_safe_load' from 'ultralytics.nn.tasks' (d:\Projects2.0\Listai\.conda\lib\site-packages\ultralytics\nn\tasks.py)
+2025-06-20 00:07:26,371 - __main__ - ERROR - Error during processing: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL ultralytics.nn.tasks.DetectionModel was not an allowed global by default. Please use `torch.serialization.add_safe_globals([ultralytics.nn.tasks.DetectionModel])` or the `torch.serialization.safe_globals([ultralytics.nn.tasks.DetectionModel])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2025-06-20 00:14:35,189 - __main__ - INFO - Initializing player tracker...
+2025-06-20 00:14:35,193 - __main__ - ERROR - Error during processing: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL ultralytics.nn.modules.conv.Conv was not an allowed global by default. Please use `torch.serialization.add_safe_globals([ultralytics.nn.modules.conv.Conv])` or the `torch.serialization.safe_globals([ultralytics.nn.modules.conv.Conv])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2025-06-20 00:16:11,657 - __main__ - INFO - Initializing player tracker...
+2025-06-20 00:16:11,661 - __main__ - ERROR - Error during processing: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL ultralytics.nn.modules.conv.Conv was not an allowed global by default. Please use `torch.serialization.add_safe_globals([ultralytics.nn.modules.conv.Conv])` or the `torch.serialization.safe_globals([ultralytics.nn.modules.conv.Conv])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2025-06-20 00:33:40,125 - __main__ - INFO - Initializing player tracker...
+2025-06-20 00:33:42,297 - tracking.tracker - INFO - PlayerTracker initialized with model: D:/Projects2.0/Listai/player-reid/models/best.pt
+2025-06-20 00:33:42,298 - __main__ - INFO - Initializing video processor...
+2025-06-20 00:33:42,352 - utils.video_io - INFO - Video loaded: ../Assignment Materials/15sec_input_720p.mp4
+2025-06-20 00:33:42,352 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 00:33:42,353 - __main__ - INFO - Initializing visualizer...
+2025-06-20 00:33:42,353 - __main__ - INFO - Processing video: ../Assignment Materials/15sec_input_720p.mp4
+2025-06-20 00:33:43,471 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 00:33:43,471 - __main__ - INFO - Processing frame 1/375
+2025-06-20 00:33:46,927 - __main__ - INFO - Processing frame 2/375
+2025-06-20 00:33:47,389 - __main__ - INFO - Processing frame 3/375
+2025-06-20 00:33:47,811 - __main__ - INFO - Processing frame 4/375
+2025-06-20 00:33:48,413 - __main__ - INFO - Processing frame 5/375
+2025-06-20 00:33:48,858 - __main__ - INFO - Processing frame 6/375
+2025-06-20 00:33:49,296 - __main__ - INFO - Processing frame 7/375
+2025-06-20 00:33:49,746 - __main__ - INFO - Processing frame 8/375
+2025-06-20 00:33:50,179 - __main__ - INFO - Processing frame 9/375
+2025-06-20 00:33:50,649 - __main__ - INFO - Processing frame 10/375
+2025-06-20 00:33:51,129 - __main__ - INFO - Processing frame 11/375
+2025-06-20 00:33:51,633 - __main__ - INFO - Processing frame 12/375
+2025-06-20 00:33:52,168 - __main__ - INFO - Processing frame 13/375
+2025-06-20 00:33:52,756 - __main__ - INFO - Processing frame 14/375
+2025-06-20 00:33:53,269 - __main__ - INFO - Processing frame 15/375
+2025-06-20 00:33:53,772 - __main__ - INFO - Processing frame 16/375
+2025-06-20 00:33:54,213 - __main__ - INFO - Processing frame 17/375
+2025-06-20 00:33:54,664 - __main__ - INFO - Processing frame 18/375
+2025-06-20 00:33:55,113 - __main__ - INFO - Processing frame 19/375
+2025-06-20 00:33:55,545 - __main__ - INFO - Processing frame 20/375
+2025-06-20 00:33:55,969 - __main__ - INFO - Processing frame 21/375
+2025-06-20 00:33:56,395 - __main__ - INFO - Processing frame 22/375
+2025-06-20 00:33:56,821 - __main__ - INFO - Processing frame 23/375
+2025-06-20 00:33:57,283 - __main__ - INFO - Processing frame 24/375
+2025-06-20 00:33:57,712 - __main__ - INFO - Processing frame 25/375
+2025-06-20 00:33:58,186 - __main__ - INFO - Processing frame 26/375
+2025-06-20 00:33:58,630 - __main__ - INFO - Processing frame 27/375
+2025-06-20 00:33:59,058 - __main__ - INFO - Processing frame 28/375
+2025-06-20 00:33:59,691 - __main__ - INFO - Processing frame 29/375
+2025-06-20 00:34:00,132 - __main__ - INFO - Processing frame 30/375
+2025-06-20 00:34:00,784 - __main__ - INFO - Processing frame 31/375
+2025-06-20 00:34:01,433 - __main__ - INFO - Processing frame 32/375
+2025-06-20 00:34:01,978 - __main__ - INFO - Processing frame 33/375
+2025-06-20 00:34:02,693 - __main__ - INFO - Processing frame 34/375
+2025-06-20 00:34:03,210 - __main__ - INFO - Processing frame 35/375
+2025-06-20 00:34:03,748 - __main__ - INFO - Processing frame 36/375
+2025-06-20 00:34:04,193 - __main__ - INFO - Processing frame 37/375
+2025-06-20 00:34:04,910 - __main__ - INFO - Processing frame 38/375
+2025-06-20 00:34:05,627 - __main__ - INFO - Processing frame 39/375
+2025-06-20 00:34:06,292 - __main__ - INFO - Processing frame 40/375
+2025-06-20 00:34:06,943 - __main__ - INFO - Processing frame 41/375
+2025-06-20 00:34:07,639 - __main__ - INFO - Processing frame 42/375
+2025-06-20 00:34:08,232 - __main__ - INFO - Processing frame 43/375
+2025-06-20 00:34:08,822 - __main__ - INFO - Processing frame 44/375
+2025-06-20 00:34:09,755 - __main__ - INFO - Processing frame 45/375
+2025-06-20 00:34:10,456 - __main__ - INFO - Processing frame 46/375
+2025-06-20 00:34:11,330 - __main__ - INFO - Processing frame 47/375
+2025-06-20 00:34:11,943 - __main__ - INFO - Processing frame 48/375
+2025-06-20 00:34:12,876 - __main__ - INFO - Processing frame 49/375
+2025-06-20 00:34:13,505 - __main__ - INFO - Processing frame 50/375
+2025-06-20 00:34:14,140 - __main__ - INFO - Processing frame 51/375
+2025-06-20 00:34:14,758 - __main__ - INFO - Processing frame 52/375
+2025-06-20 00:34:15,422 - __main__ - INFO - Processing frame 53/375
+2025-06-20 00:34:16,036 - __main__ - INFO - Processing frame 54/375
+2025-06-20 00:34:16,659 - __main__ - INFO - Processing frame 55/375
+2025-06-20 00:34:17,280 - __main__ - INFO - Processing frame 56/375
+2025-06-20 00:34:17,908 - __main__ - INFO - Processing frame 57/375
+2025-06-20 00:34:18,527 - __main__ - INFO - Processing frame 58/375
+2025-06-20 00:34:19,134 - __main__ - INFO - Processing frame 59/375
+2025-06-20 00:34:19,748 - __main__ - INFO - Processing frame 60/375
+2025-06-20 00:34:20,360 - __main__ - INFO - Processing frame 61/375
+2025-06-20 00:34:20,979 - __main__ - INFO - Processing frame 62/375
+2025-06-20 00:34:21,859 - __main__ - INFO - Processing frame 63/375
+2025-06-20 00:34:22,766 - __main__ - INFO - Processing frame 64/375
+2025-06-20 00:34:23,474 - __main__ - INFO - Processing frame 65/375
+2025-06-20 00:34:24,134 - __main__ - INFO - Processing frame 66/375
+2025-06-20 00:34:25,019 - __main__ - INFO - Processing frame 67/375
+2025-06-20 00:34:25,917 - __main__ - INFO - Processing frame 68/375
+2025-06-20 00:34:26,813 - __main__ - INFO - Processing frame 69/375
+2025-06-20 00:34:27,684 - __main__ - INFO - Processing frame 70/375
+2025-06-20 00:34:28,654 - __main__ - INFO - Processing frame 71/375
+2025-06-20 00:34:29,521 - __main__ - INFO - Processing frame 72/375
+2025-06-20 00:34:30,400 - __main__ - INFO - Processing frame 73/375
+2025-06-20 00:34:31,285 - __main__ - INFO - Processing frame 74/375
+2025-06-20 00:34:32,135 - __main__ - INFO - Processing frame 75/375
+2025-06-20 00:34:32,990 - __main__ - INFO - Processing frame 76/375
+2025-06-20 00:34:33,838 - __main__ - INFO - Processing frame 77/375
+2025-06-20 00:34:34,687 - __main__ - INFO - Processing frame 78/375
+2025-06-20 00:34:35,554 - __main__ - INFO - Processing frame 79/375
+2025-06-20 00:34:36,185 - __main__ - INFO - Processing frame 80/375
+2025-06-20 00:34:36,810 - __main__ - INFO - Processing frame 81/375
+2025-06-20 00:34:37,665 - __main__ - INFO - Processing frame 82/375
+2025-06-20 00:34:38,281 - __main__ - INFO - Processing frame 83/375
+2025-06-20 00:34:38,896 - __main__ - INFO - Processing frame 84/375
+2025-06-20 00:34:39,546 - __main__ - INFO - Processing frame 85/375
+2025-06-20 00:34:40,339 - __main__ - INFO - Processing frame 86/375
+2025-06-20 00:34:40,986 - __main__ - INFO - Processing frame 87/375
+2025-06-20 00:34:41,886 - __main__ - INFO - Processing frame 88/375
+2025-06-20 00:34:42,768 - __main__ - INFO - Processing frame 89/375
+2025-06-20 00:34:43,585 - __main__ - INFO - Processing frame 90/375
+2025-06-20 00:34:44,210 - __main__ - INFO - Processing frame 91/375
+2025-06-20 00:34:45,102 - __main__ - INFO - Processing frame 92/375
+2025-06-20 00:34:45,987 - __main__ - INFO - Processing frame 93/375
+2025-06-20 00:34:46,878 - __main__ - INFO - Processing frame 94/375
+2025-06-20 00:34:47,724 - __main__ - INFO - Processing frame 95/375
+2025-06-20 00:34:48,584 - __main__ - INFO - Processing frame 96/375
+2025-06-20 00:34:49,408 - __main__ - INFO - Processing frame 97/375
+2025-06-20 00:34:50,243 - __main__ - INFO - Processing frame 98/375
+2025-06-20 00:34:51,106 - __main__ - INFO - Processing frame 99/375
+2025-06-20 00:34:51,950 - __main__ - INFO - Processing frame 100/375
+2025-06-20 00:34:52,794 - __main__ - INFO - Processing frame 101/375
+2025-06-20 00:34:53,674 - __main__ - INFO - Processing frame 102/375
+2025-06-20 00:34:54,532 - __main__ - INFO - Processing frame 103/375
+2025-06-20 00:34:55,444 - __main__ - INFO - Processing frame 104/375
+2025-06-20 00:34:56,359 - __main__ - INFO - Processing frame 105/375
+2025-06-20 00:34:57,002 - __main__ - INFO - Processing frame 106/375
+2025-06-20 00:34:57,973 - __main__ - INFO - Processing frame 107/375
+2025-06-20 00:34:58,811 - __main__ - INFO - Processing frame 108/375
+2025-06-20 00:34:59,662 - __main__ - INFO - Processing frame 109/375
+2025-06-20 00:35:00,272 - __main__ - INFO - Processing frame 110/375
+2025-06-20 00:35:01,098 - __main__ - INFO - Processing frame 111/375
+2025-06-20 00:35:01,722 - __main__ - INFO - Processing frame 112/375
+2025-06-20 00:35:02,340 - __main__ - INFO - Processing frame 113/375
+2025-06-20 00:35:02,943 - __main__ - INFO - Processing frame 114/375
+2025-06-20 00:35:03,823 - __main__ - INFO - Processing frame 115/375
+2025-06-20 00:35:04,460 - __main__ - INFO - Processing frame 116/375
+2025-06-20 00:35:05,088 - __main__ - INFO - Processing frame 117/375
+2025-06-20 00:35:05,723 - __main__ - INFO - Processing frame 118/375
+2025-06-20 00:35:06,334 - __main__ - INFO - Processing frame 119/375
+2025-06-20 00:35:07,181 - __main__ - INFO - Processing frame 120/375
+2025-06-20 00:35:07,808 - __main__ - INFO - Processing frame 121/375
+2025-06-20 00:35:08,680 - __main__ - INFO - Processing frame 122/375
+2025-06-20 00:35:09,569 - __main__ - INFO - Processing frame 123/375
+2025-06-20 00:35:10,218 - __main__ - INFO - Processing frame 124/375
+2025-06-20 00:35:10,856 - __main__ - INFO - Processing frame 125/375
+2025-06-20 00:35:11,573 - __main__ - INFO - Processing frame 126/375
+2025-06-20 00:35:12,252 - __main__ - INFO - Processing frame 127/375
+2025-06-20 00:35:12,938 - __main__ - INFO - Processing frame 128/375
+2025-06-20 00:35:13,635 - __main__ - INFO - Processing frame 129/375
+2025-06-20 00:35:14,516 - __main__ - INFO - Processing frame 130/375
+2025-06-20 00:35:15,379 - __main__ - INFO - Processing frame 131/375
+2025-06-20 00:35:16,255 - __main__ - INFO - Processing frame 132/375
+2025-06-20 00:35:17,102 - __main__ - INFO - Processing frame 133/375
+2025-06-20 00:35:17,963 - __main__ - INFO - Processing frame 134/375
+2025-06-20 00:35:18,666 - __main__ - INFO - Processing frame 135/375
+2025-06-20 00:35:19,330 - __main__ - INFO - Processing frame 136/375
+2025-06-20 00:35:19,948 - __main__ - INFO - Processing frame 137/375
+2025-06-20 00:35:20,808 - __main__ - INFO - Processing frame 138/375
+2025-06-20 00:35:21,644 - __main__ - INFO - Processing frame 139/375
+2025-06-20 00:35:22,509 - __main__ - INFO - Processing frame 140/375
+2025-06-20 00:35:23,155 - __main__ - INFO - Processing frame 141/375
+2025-06-20 00:35:23,850 - __main__ - INFO - Processing frame 142/375
+2025-06-20 00:35:24,472 - __main__ - INFO - Processing frame 143/375
+2025-06-20 00:35:25,101 - __main__ - INFO - Processing frame 144/375
+2025-06-20 00:35:25,695 - __main__ - INFO - Processing frame 145/375
+2025-06-20 00:35:26,321 - __main__ - INFO - Processing frame 146/375
+2025-06-20 00:35:27,209 - __main__ - INFO - Processing frame 147/375
+2025-06-20 00:35:28,237 - __main__ - INFO - Processing frame 148/375
+2025-06-20 00:35:29,149 - __main__ - INFO - Processing frame 149/375
+2025-06-20 00:35:29,792 - __main__ - INFO - Processing frame 150/375
+2025-06-20 00:35:30,435 - __main__ - INFO - Processing frame 151/375
+2025-06-20 00:35:31,284 - __main__ - INFO - Processing frame 152/375
+2025-06-20 00:35:32,163 - __main__ - INFO - Processing frame 153/375
+2025-06-20 00:35:33,039 - __main__ - INFO - Processing frame 154/375
+2025-06-20 00:35:33,923 - __main__ - INFO - Processing frame 155/375
+2025-06-20 00:35:34,808 - __main__ - INFO - Processing frame 156/375
+2025-06-20 00:35:35,475 - __main__ - INFO - Processing frame 157/375
+2025-06-20 00:35:36,240 - __main__ - INFO - Processing frame 158/375
+2025-06-20 00:35:37,098 - __main__ - INFO - Processing frame 159/375
+2025-06-20 00:35:37,736 - __main__ - INFO - Processing frame 160/375
+2025-06-20 00:35:38,390 - __main__ - INFO - Processing frame 161/375
+2025-06-20 00:35:39,024 - __main__ - INFO - Processing frame 162/375
+2025-06-20 00:35:39,665 - __main__ - INFO - Processing frame 163/375
+2025-06-20 00:35:40,320 - __main__ - INFO - Processing frame 164/375
+2025-06-20 00:35:41,006 - __main__ - INFO - Processing frame 165/375
+2025-06-20 00:35:41,663 - __main__ - INFO - Processing frame 166/375
+2025-06-20 00:35:42,304 - __main__ - INFO - Processing frame 167/375
+2025-06-20 00:35:42,965 - __main__ - INFO - Processing frame 168/375
+2025-06-20 00:35:43,901 - __main__ - INFO - Processing frame 169/375
+2025-06-20 00:35:44,595 - __main__ - INFO - Processing frame 170/375
+2025-06-20 00:35:45,551 - __main__ - INFO - Processing frame 171/375
+2025-06-20 00:35:46,233 - __main__ - INFO - Processing frame 172/375
+2025-06-20 00:35:46,893 - __main__ - INFO - Processing frame 173/375
+2025-06-20 00:35:47,568 - __main__ - INFO - Processing frame 174/375
+2025-06-20 00:35:48,216 - __main__ - INFO - Processing frame 175/375
+2025-06-20 00:35:48,916 - __main__ - INFO - Processing frame 176/375
+2025-06-20 00:35:49,627 - __main__ - INFO - Processing frame 177/375
+2025-06-20 00:35:50,311 - __main__ - INFO - Processing frame 178/375
+2025-06-20 00:35:50,996 - __main__ - INFO - Processing frame 179/375
+2025-06-20 00:35:51,679 - __main__ - INFO - Processing frame 180/375
+2025-06-20 00:35:52,785 - __main__ - INFO - Processing frame 181/375
+2025-06-20 00:35:53,463 - __main__ - INFO - Processing frame 182/375
+2025-06-20 00:35:54,154 - __main__ - INFO - Processing frame 183/375
+2025-06-20 00:35:55,119 - __main__ - INFO - Processing frame 184/375
+2025-06-20 00:35:55,888 - __main__ - INFO - Processing frame 185/375
+2025-06-20 00:35:56,565 - __main__ - INFO - Processing frame 186/375
+2025-06-20 00:35:57,242 - __main__ - INFO - Processing frame 187/375
+2025-06-20 00:35:58,156 - __main__ - INFO - Processing frame 188/375
+2025-06-20 00:35:59,133 - __main__ - INFO - Processing frame 189/375
+2025-06-20 00:35:59,877 - __main__ - INFO - Processing frame 190/375
+2025-06-20 00:36:00,962 - __main__ - INFO - Processing frame 191/375
+2025-06-20 00:36:02,013 - __main__ - INFO - Processing frame 192/375
+2025-06-20 00:36:02,769 - __main__ - INFO - Processing frame 193/375
+2025-06-20 00:36:03,762 - __main__ - INFO - Processing frame 194/375
+2025-06-20 00:36:04,725 - __main__ - INFO - Processing frame 195/375
+2025-06-20 00:36:05,420 - __main__ - INFO - Processing frame 196/375
+2025-06-20 00:36:06,134 - __main__ - INFO - Processing frame 197/375
+2025-06-20 00:36:06,961 - __main__ - INFO - Processing frame 198/375
+2025-06-20 00:36:07,662 - __main__ - INFO - Processing frame 199/375
+2025-06-20 00:36:08,651 - __main__ - INFO - Processing frame 200/375
+2025-06-20 00:36:09,334 - __main__ - INFO - Processing frame 201/375
+2025-06-20 00:36:10,300 - __main__ - INFO - Processing frame 202/375
+2025-06-20 00:36:11,265 - __main__ - INFO - Processing frame 203/375
+2025-06-20 00:36:12,225 - __main__ - INFO - Processing frame 204/375
+2025-06-20 00:36:13,183 - __main__ - INFO - Processing frame 205/375
+2025-06-20 00:36:14,335 - __main__ - INFO - Processing frame 206/375
+2025-06-20 00:36:15,063 - __main__ - INFO - Processing frame 207/375
+2025-06-20 00:36:15,806 - __main__ - INFO - Processing frame 208/375
+2025-06-20 00:36:16,580 - __main__ - INFO - Processing frame 209/375
+2025-06-20 00:36:17,609 - __main__ - INFO - Processing frame 210/375
+2025-06-20 00:36:18,669 - __main__ - INFO - Processing frame 211/375
+2025-06-20 00:36:19,450 - __main__ - INFO - Processing frame 212/375
+2025-06-20 00:36:20,171 - __main__ - INFO - Processing frame 213/375
+2025-06-20 00:36:21,199 - __main__ - INFO - Processing frame 214/375
+2025-06-20 00:36:22,227 - __main__ - INFO - Processing frame 215/375
+2025-06-20 00:36:23,554 - __main__ - INFO - Processing frame 216/375
+2025-06-20 00:36:24,534 - __main__ - INFO - Processing frame 217/375
+2025-06-20 00:36:25,632 - __main__ - INFO - Processing frame 218/375
+2025-06-20 00:36:26,389 - __main__ - INFO - Processing frame 219/375
+2025-06-20 00:36:27,228 - __main__ - INFO - Processing frame 220/375
+2025-06-20 00:36:28,163 - __main__ - INFO - Processing frame 221/375
+2025-06-20 00:36:28,943 - __main__ - INFO - Processing frame 222/375
+2025-06-20 00:36:29,720 - __main__ - INFO - Processing frame 223/375
+2025-06-20 00:36:30,496 - __main__ - INFO - Processing frame 224/375
+2025-06-20 00:36:31,251 - __main__ - INFO - Processing frame 225/375
+2025-06-20 00:36:32,301 - __main__ - INFO - Processing frame 226/375
+2025-06-20 00:36:33,385 - __main__ - INFO - Processing frame 227/375
+2025-06-20 00:36:34,130 - __main__ - INFO - Processing frame 228/375
+2025-06-20 00:36:35,214 - __main__ - INFO - Processing frame 229/375
+2025-06-20 00:36:36,215 - __main__ - INFO - Processing frame 230/375
+2025-06-20 00:36:36,926 - __main__ - INFO - Processing frame 231/375
+2025-06-20 00:36:37,641 - __main__ - INFO - Processing frame 232/375
+2025-06-20 00:36:38,347 - __main__ - INFO - Processing frame 233/375
+2025-06-20 00:36:39,351 - __main__ - INFO - Processing frame 234/375
+2025-06-20 00:36:40,630 - __main__ - INFO - Processing frame 235/375
+2025-06-20 00:36:41,375 - __main__ - INFO - Processing frame 236/375
+2025-06-20 00:36:42,131 - __main__ - INFO - Processing frame 237/375
+2025-06-20 00:36:42,862 - __main__ - INFO - Processing frame 238/375
+2025-06-20 00:36:43,625 - __main__ - INFO - Processing frame 239/375
+2025-06-20 00:36:44,381 - __main__ - INFO - Processing frame 240/375
+2025-06-20 00:36:45,346 - __main__ - INFO - Processing frame 241/375
+2025-06-20 00:36:46,320 - __main__ - INFO - Processing frame 242/375
+2025-06-20 00:36:47,021 - __main__ - INFO - Processing frame 243/375
+2025-06-20 00:36:47,763 - __main__ - INFO - Processing frame 244/375
+2025-06-20 00:36:48,578 - __main__ - INFO - Processing frame 245/375
+2025-06-20 00:36:49,435 - __main__ - INFO - Processing frame 246/375
+2025-06-20 00:36:50,310 - __main__ - INFO - Processing frame 247/375
+2025-06-20 00:36:51,117 - __main__ - INFO - Processing frame 248/375
+2025-06-20 00:36:51,912 - __main__ - INFO - Processing frame 249/375
+2025-06-20 00:36:52,703 - __main__ - INFO - Processing frame 250/375
+2025-06-20 00:36:53,404 - __main__ - INFO - Processing frame 251/375
+2025-06-20 00:36:54,454 - __main__ - INFO - Processing frame 252/375
+2025-06-20 00:36:55,423 - __main__ - INFO - Processing frame 253/375
+2025-06-20 00:36:56,127 - __main__ - INFO - Processing frame 254/375
+2025-06-20 00:36:56,833 - __main__ - INFO - Processing frame 255/375
+2025-06-20 00:36:57,534 - __main__ - INFO - Processing frame 256/375
+2025-06-20 00:36:58,226 - __main__ - INFO - Processing frame 257/375
+2025-06-20 00:36:58,922 - __main__ - INFO - Processing frame 258/375
+2025-06-20 00:36:59,663 - __main__ - INFO - Processing frame 259/375
+2025-06-20 00:37:00,383 - __main__ - INFO - Processing frame 260/375
+2025-06-20 00:37:01,122 - __main__ - INFO - Processing frame 261/375
+2025-06-20 00:37:01,896 - __main__ - INFO - Processing frame 262/375
+2025-06-20 00:37:02,629 - __main__ - INFO - Processing frame 263/375
+2025-06-20 00:37:03,413 - __main__ - INFO - Processing frame 264/375
+2025-06-20 00:37:04,185 - __main__ - INFO - Processing frame 265/375
+2025-06-20 00:37:05,012 - __main__ - INFO - Processing frame 266/375
+2025-06-20 00:37:05,799 - __main__ - INFO - Processing frame 267/375
+2025-06-20 00:37:06,629 - __main__ - INFO - Processing frame 268/375
+2025-06-20 00:37:07,556 - __main__ - INFO - Processing frame 269/375
+2025-06-20 00:37:08,343 - __main__ - INFO - Processing frame 270/375
+2025-06-20 00:37:09,099 - __main__ - INFO - Processing frame 271/375
+2025-06-20 00:37:09,805 - __main__ - INFO - Processing frame 272/375
+2025-06-20 00:37:10,531 - __main__ - INFO - Processing frame 273/375
+2025-06-20 00:37:11,246 - __main__ - INFO - Processing frame 274/375
+2025-06-20 00:37:11,953 - __main__ - INFO - Processing frame 275/375
+2025-06-20 00:37:12,916 - __main__ - INFO - Processing frame 276/375
+2025-06-20 00:37:13,872 - __main__ - INFO - Processing frame 277/375
+2025-06-20 00:37:14,568 - __main__ - INFO - Processing frame 278/375
+2025-06-20 00:37:15,271 - __main__ - INFO - Processing frame 279/375
+2025-06-20 00:37:16,004 - __main__ - INFO - Processing frame 280/375
+2025-06-20 00:37:16,706 - __main__ - INFO - Processing frame 281/375
+2025-06-20 00:37:17,430 - __main__ - INFO - Processing frame 282/375
+2025-06-20 00:37:18,166 - __main__ - INFO - Processing frame 283/375
+2025-06-20 00:37:18,867 - __main__ - INFO - Processing frame 284/375
+2025-06-20 00:37:19,621 - __main__ - INFO - Processing frame 285/375
+2025-06-20 00:37:20,402 - __main__ - INFO - Processing frame 286/375
+2025-06-20 00:37:21,154 - __main__ - INFO - Processing frame 287/375
+2025-06-20 00:37:21,898 - __main__ - INFO - Processing frame 288/375
+2025-06-20 00:37:22,835 - __main__ - INFO - Processing frame 289/375
+2025-06-20 00:37:23,586 - __main__ - INFO - Processing frame 290/375
+2025-06-20 00:37:24,325 - __main__ - INFO - Processing frame 291/375
+2025-06-20 00:37:25,141 - __main__ - INFO - Processing frame 292/375
+2025-06-20 00:37:25,900 - __main__ - INFO - Processing frame 293/375
+2025-06-20 00:37:26,604 - __main__ - INFO - Processing frame 294/375
+2025-06-20 00:37:27,308 - __main__ - INFO - Processing frame 295/375
+2025-06-20 00:37:28,040 - __main__ - INFO - Processing frame 296/375
+2025-06-20 00:37:28,868 - __main__ - INFO - Processing frame 297/375
+2025-06-20 00:37:29,585 - __main__ - INFO - Processing frame 298/375
+2025-06-20 00:37:30,350 - __main__ - INFO - Processing frame 299/375
+2025-06-20 00:37:31,060 - __main__ - INFO - Processing frame 300/375
+2025-06-20 00:37:31,794 - __main__ - INFO - Processing frame 301/375
+2025-06-20 00:37:32,522 - __main__ - INFO - Processing frame 302/375
+2025-06-20 00:37:33,230 - __main__ - INFO - Processing frame 303/375
+2025-06-20 00:37:33,953 - __main__ - INFO - Processing frame 304/375
+2025-06-20 00:37:34,672 - __main__ - INFO - Processing frame 305/375
+2025-06-20 00:37:35,433 - __main__ - INFO - Processing frame 306/375
+2025-06-20 00:37:36,176 - __main__ - INFO - Processing frame 307/375
+2025-06-20 00:37:36,914 - __main__ - INFO - Processing frame 308/375
+2025-06-20 00:37:37,890 - __main__ - INFO - Processing frame 309/375
+2025-06-20 00:37:38,693 - __main__ - INFO - Processing frame 310/375
+2025-06-20 00:37:39,556 - __main__ - INFO - Processing frame 311/375
+2025-06-20 00:37:40,311 - __main__ - INFO - Processing frame 312/375
+2025-06-20 00:37:40,972 - __main__ - INFO - Processing frame 313/375
+2025-06-20 00:37:41,607 - __main__ - INFO - Processing frame 314/375
+2025-06-20 00:37:42,221 - __main__ - INFO - Processing frame 315/375
+2025-06-20 00:37:42,908 - __main__ - INFO - Processing frame 316/375
+2025-06-20 00:37:43,640 - __main__ - INFO - Processing frame 317/375
+2025-06-20 00:37:44,296 - __main__ - INFO - Processing frame 318/375
+2025-06-20 00:37:44,919 - __main__ - INFO - Processing frame 319/375
+2025-06-20 00:37:45,547 - __main__ - INFO - Processing frame 320/375
+2025-06-20 00:37:46,162 - __main__ - INFO - Processing frame 321/375
+2025-06-20 00:37:46,768 - __main__ - INFO - Processing frame 322/375
+2025-06-20 00:37:47,804 - __main__ - INFO - Processing frame 323/375
+2025-06-20 00:37:48,423 - __main__ - INFO - Processing frame 324/375
+2025-06-20 00:37:49,020 - __main__ - INFO - Processing frame 325/375
+2025-06-20 00:37:49,630 - __main__ - INFO - Processing frame 326/375
+2025-06-20 00:37:50,505 - __main__ - INFO - Processing frame 327/375
+2025-06-20 00:37:51,149 - __main__ - INFO - Processing frame 328/375
+2025-06-20 00:37:52,069 - __main__ - INFO - Processing frame 329/375
+2025-06-20 00:37:53,045 - __main__ - INFO - Processing frame 330/375
+2025-06-20 00:37:53,777 - __main__ - INFO - Processing frame 331/375
+2025-06-20 00:37:54,592 - __main__ - INFO - Processing frame 332/375
+2025-06-20 00:37:55,278 - __main__ - INFO - Processing frame 333/375
+2025-06-20 00:37:56,053 - __main__ - INFO - Processing frame 334/375
+2025-06-20 00:37:56,767 - __main__ - INFO - Processing frame 335/375
+2025-06-20 00:37:57,467 - __main__ - INFO - Processing frame 336/375
+2025-06-20 00:37:58,162 - __main__ - INFO - Processing frame 337/375
+2025-06-20 00:37:58,829 - __main__ - INFO - Processing frame 338/375
+2025-06-20 00:37:59,490 - __main__ - INFO - Processing frame 339/375
+2025-06-20 00:38:00,148 - __main__ - INFO - Processing frame 340/375
+2025-06-20 00:38:00,814 - __main__ - INFO - Processing frame 341/375
+2025-06-20 00:38:01,504 - __main__ - INFO - Processing frame 342/375
+2025-06-20 00:38:02,142 - __main__ - INFO - Processing frame 343/375
+2025-06-20 00:38:02,780 - __main__ - INFO - Processing frame 344/375
+2025-06-20 00:38:03,478 - __main__ - INFO - Processing frame 345/375
+2025-06-20 00:38:04,141 - __main__ - INFO - Processing frame 346/375
+2025-06-20 00:38:04,846 - __main__ - INFO - Processing frame 347/375
+2025-06-20 00:38:05,540 - __main__ - INFO - Processing frame 348/375
+2025-06-20 00:38:06,176 - __main__ - INFO - Processing frame 349/375
+2025-06-20 00:38:06,814 - __main__ - INFO - Processing frame 350/375
+2025-06-20 00:38:07,498 - __main__ - INFO - Processing frame 351/375
+2025-06-20 00:38:08,179 - __main__ - INFO - Processing frame 352/375
+2025-06-20 00:38:08,848 - __main__ - INFO - Processing frame 353/375
+2025-06-20 00:38:09,542 - __main__ - INFO - Processing frame 354/375
+2025-06-20 00:38:10,318 - __main__ - INFO - Processing frame 355/375
+2025-06-20 00:38:10,998 - __main__ - INFO - Processing frame 356/375
+2025-06-20 00:38:11,653 - __main__ - INFO - Processing frame 357/375
+2025-06-20 00:38:12,308 - __main__ - INFO - Processing frame 358/375
+2025-06-20 00:38:12,954 - __main__ - INFO - Processing frame 359/375
+2025-06-20 00:38:13,582 - __main__ - INFO - Processing frame 360/375
+2025-06-20 00:38:14,218 - __main__ - INFO - Processing frame 361/375
+2025-06-20 00:38:14,867 - __main__ - INFO - Processing frame 362/375
+2025-06-20 00:38:15,507 - __main__ - INFO - Processing frame 363/375
+2025-06-20 00:38:16,156 - __main__ - INFO - Processing frame 364/375
+2025-06-20 00:38:16,810 - __main__ - INFO - Processing frame 365/375
+2025-06-20 00:38:17,439 - __main__ - INFO - Processing frame 366/375
+2025-06-20 00:38:18,109 - __main__ - INFO - Processing frame 367/375
+2025-06-20 00:38:18,794 - __main__ - INFO - Processing frame 368/375
+2025-06-20 00:38:19,467 - __main__ - INFO - Processing frame 369/375
+2025-06-20 00:38:20,114 - __main__ - INFO - Processing frame 370/375
+2025-06-20 00:38:20,742 - __main__ - INFO - Processing frame 371/375
+2025-06-20 00:38:21,385 - __main__ - INFO - Processing frame 372/375
+2025-06-20 00:38:22,024 - __main__ - INFO - Processing frame 373/375
+2025-06-20 00:38:22,684 - __main__ - INFO - Processing frame 374/375
+2025-06-20 00:38:23,355 - __main__ - INFO - Processing frame 375/375
+2025-06-20 00:38:24,022 - __main__ - INFO - Saving output video: output_tracked.mp4
+2025-06-20 00:38:26,440 - utils.video_io - INFO - Video saved: output_tracked.mp4 (375 frames, 25 FPS)
+2025-06-20 00:38:26,441 - __main__ - INFO - Player re-identification completed successfully!
+2025-06-20 00:38:26,441 - __main__ - INFO - Tracking statistics: {'total_frames': 375, 'total_detections': 113, 'total_tracks': 4, 'active_tracks': 1, 'disappeared_tracks': 0}
+2025-06-20 00:58:38,567 - __main__ - INFO - Initializing player tracker...
+2025-06-20 00:58:38,820 - tracking.tracker - INFO - PlayerTracker initialized with model: D:/Projects2.0/Listai/player-reid/models/best.pt
+2025-06-20 00:58:38,820 - __main__ - INFO - Initializing video processor...
+2025-06-20 00:58:39,067 - utils.video_io - INFO - Video loaded: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 00:58:39,067 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 00:58:39,067 - utils.video_io - INFO - Audio track detected and loaded
+2025-06-20 00:58:39,067 - __main__ - INFO - Initializing visualizer...
+2025-06-20 00:58:39,068 - __main__ - INFO - Processing video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 00:58:40,231 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 00:58:40,231 - __main__ - INFO - Processing frame 1/375
+2025-06-20 00:58:43,551 - __main__ - INFO - Processing frame 2/375
+2025-06-20 00:58:44,092 - __main__ - INFO - Processing frame 3/375
+2025-06-20 00:58:44,595 - __main__ - INFO - Processing frame 4/375
+2025-06-20 00:58:45,244 - __main__ - INFO - Processing frame 5/375
+2025-06-20 00:58:45,799 - __main__ - INFO - Processing frame 6/375
+2025-06-20 00:58:46,256 - __main__ - INFO - Processing frame 7/375
+2025-06-20 00:58:46,728 - __main__ - INFO - Processing frame 8/375
+2025-06-20 00:58:47,215 - __main__ - INFO - Processing frame 9/375
+2025-06-20 00:58:47,788 - __main__ - INFO - Processing frame 10/375
+2025-06-20 00:58:48,254 - __main__ - INFO - Processing frame 11/375
+2025-06-20 00:58:48,746 - __main__ - INFO - Processing frame 12/375
+2025-06-20 00:58:49,225 - __main__ - INFO - Processing frame 13/375
+2025-06-20 00:58:49,704 - __main__ - INFO - Processing frame 14/375
+2025-06-20 00:58:50,225 - __main__ - INFO - Processing frame 15/375
+2025-06-20 00:58:50,740 - __main__ - INFO - Processing frame 16/375
+2025-06-20 00:58:51,289 - __main__ - INFO - Processing frame 17/375
+2025-06-20 00:58:51,826 - __main__ - INFO - Processing frame 18/375
+2025-06-20 00:58:52,371 - __main__ - INFO - Processing frame 19/375
+2025-06-20 00:58:52,904 - __main__ - INFO - Processing frame 20/375
+2025-06-20 00:58:53,420 - __main__ - INFO - Processing frame 21/375
+2025-06-20 00:58:53,964 - __main__ - INFO - Processing frame 22/375
+2025-06-20 00:58:54,505 - __main__ - INFO - Processing frame 23/375
+2025-06-20 00:58:55,030 - __main__ - INFO - Processing frame 24/375
+2025-06-20 00:58:55,581 - __main__ - INFO - Processing frame 25/375
+2025-06-20 00:58:56,155 - __main__ - INFO - Processing frame 26/375
+2025-06-20 00:58:56,681 - __main__ - INFO - Processing frame 27/375
+2025-06-20 00:58:57,299 - __main__ - INFO - Processing frame 28/375
+2025-06-20 00:58:57,857 - __main__ - INFO - Processing frame 29/375
+2025-06-20 00:58:58,401 - __main__ - INFO - Processing frame 30/375
+2025-06-20 00:58:58,954 - __main__ - INFO - Processing frame 31/375
+2025-06-20 00:58:59,544 - __main__ - INFO - Processing frame 32/375
+2025-06-20 00:59:00,469 - __main__ - INFO - Processing frame 33/375
+2025-06-20 00:59:01,090 - __main__ - INFO - Processing frame 34/375
+2025-06-20 00:59:01,705 - __main__ - INFO - Processing frame 35/375
+2025-06-20 00:59:02,356 - __main__ - INFO - Processing frame 36/375
+2025-06-20 00:59:03,092 - __main__ - INFO - Processing frame 37/375
+2025-06-20 00:59:03,667 - __main__ - INFO - Processing frame 38/375
+2025-06-20 00:59:04,255 - __main__ - INFO - Processing frame 39/375
+2025-06-20 00:59:04,843 - __main__ - INFO - Processing frame 40/375
+2025-06-20 00:59:05,434 - __main__ - INFO - Processing frame 41/375
+2025-06-20 00:59:06,003 - __main__ - INFO - Processing frame 42/375
+2025-06-20 00:59:06,586 - __main__ - INFO - Processing frame 43/375
+2025-06-20 00:59:07,187 - __main__ - INFO - Processing frame 44/375
+2025-06-20 00:59:07,819 - __main__ - INFO - Processing frame 45/375
+2025-06-20 00:59:08,451 - __main__ - INFO - Processing frame 46/375
+2025-06-20 00:59:09,067 - __main__ - INFO - Processing frame 47/375
+2025-06-20 00:59:09,698 - __main__ - INFO - Processing frame 48/375
+2025-06-20 00:59:10,277 - __main__ - INFO - Processing frame 49/375
+2025-06-20 00:59:10,854 - __main__ - INFO - Processing frame 50/375
+2025-06-20 00:59:11,451 - __main__ - INFO - Processing frame 51/375
+2025-06-20 00:59:12,053 - __main__ - INFO - Processing frame 52/375
+2025-06-20 00:59:12,614 - __main__ - INFO - Processing frame 53/375
+2025-06-20 00:59:13,189 - __main__ - INFO - Processing frame 54/375
+2025-06-20 00:59:13,750 - __main__ - INFO - Processing frame 55/375
+2025-06-20 00:59:14,350 - __main__ - INFO - Processing frame 56/375
+2025-06-20 00:59:14,955 - __main__ - INFO - Processing frame 57/375
+2025-06-20 00:59:15,573 - __main__ - INFO - Processing frame 58/375
+2025-06-20 00:59:16,188 - __main__ - INFO - Processing frame 59/375
+2025-06-20 00:59:16,821 - __main__ - INFO - Processing frame 60/375
+2025-06-20 00:59:17,427 - __main__ - INFO - Processing frame 61/375
+2025-06-20 00:59:18,017 - __main__ - INFO - Processing frame 62/375
+2025-06-20 00:59:18,613 - __main__ - INFO - Processing frame 63/375
+2025-06-20 00:59:19,203 - __main__ - INFO - Processing frame 64/375
+2025-06-20 00:59:19,790 - __main__ - INFO - Processing frame 65/375
+2025-06-20 00:59:20,494 - __main__ - INFO - Processing frame 66/375
+2025-06-20 00:59:21,103 - __main__ - INFO - Processing frame 67/375
+2025-06-20 00:59:21,698 - __main__ - INFO - Processing frame 68/375
+2025-06-20 00:59:22,315 - __main__ - INFO - Processing frame 69/375
+2025-06-20 00:59:22,906 - __main__ - INFO - Processing frame 70/375
+2025-06-20 00:59:23,508 - __main__ - INFO - Processing frame 71/375
+2025-06-20 00:59:24,089 - __main__ - INFO - Processing frame 72/375
+2025-06-20 00:59:24,670 - __main__ - INFO - Processing frame 73/375
+2025-06-20 00:59:25,272 - __main__ - INFO - Processing frame 74/375
+2025-06-20 00:59:25,850 - __main__ - INFO - Processing frame 75/375
+2025-06-20 00:59:26,427 - __main__ - INFO - Processing frame 76/375
+2025-06-20 00:59:27,006 - __main__ - INFO - Processing frame 77/375
+2025-06-20 00:59:27,606 - __main__ - INFO - Processing frame 78/375
+2025-06-20 00:59:28,197 - __main__ - INFO - Processing frame 79/375
+2025-06-20 00:59:28,795 - __main__ - INFO - Processing frame 80/375
+2025-06-20 00:59:29,405 - __main__ - INFO - Processing frame 81/375
+2025-06-20 00:59:30,149 - __main__ - INFO - Processing frame 82/375
+2025-06-20 00:59:30,790 - __main__ - INFO - Processing frame 83/375
+2025-06-20 00:59:31,396 - __main__ - INFO - Processing frame 84/375
+2025-06-20 00:59:32,054 - __main__ - INFO - Processing frame 85/375
+2025-06-20 00:59:32,708 - __main__ - INFO - Processing frame 86/375
+2025-06-20 00:59:33,347 - __main__ - INFO - Processing frame 87/375
+2025-06-20 00:59:34,021 - __main__ - INFO - Processing frame 88/375
+2025-06-20 00:59:34,624 - __main__ - INFO - Processing frame 89/375
+2025-06-20 00:59:35,064 - __main__ - INFO - Processing frame 90/375
+2025-06-20 00:59:35,487 - __main__ - INFO - Processing frame 91/375
+2025-06-20 00:59:35,915 - __main__ - INFO - Processing frame 92/375
+2025-06-20 00:59:36,357 - __main__ - INFO - Processing frame 93/375
+2025-06-20 00:59:36,871 - __main__ - INFO - Processing frame 94/375
+2025-06-20 00:59:37,330 - __main__ - INFO - Processing frame 95/375
+2025-06-20 00:59:37,791 - __main__ - INFO - Processing frame 96/375
+2025-06-20 00:59:38,279 - __main__ - INFO - Processing frame 97/375
+2025-06-20 00:59:38,744 - __main__ - INFO - Processing frame 98/375
+2025-06-20 00:59:39,190 - __main__ - INFO - Processing frame 99/375
+2025-06-20 00:59:39,697 - __main__ - INFO - Processing frame 100/375
+2025-06-20 00:59:40,116 - __main__ - INFO - Processing frame 101/375
+2025-06-20 00:59:40,578 - __main__ - INFO - Processing frame 102/375
+2025-06-20 00:59:41,029 - __main__ - INFO - Processing frame 103/375
+2025-06-20 00:59:41,479 - __main__ - INFO - Processing frame 104/375
+2025-06-20 00:59:41,919 - __main__ - INFO - Processing frame 105/375
+2025-06-20 00:59:42,338 - __main__ - INFO - Processing frame 106/375
+2025-06-20 00:59:42,787 - __main__ - INFO - Processing frame 107/375
+2025-06-20 00:59:43,254 - __main__ - INFO - Processing frame 108/375
+2025-06-20 00:59:43,762 - __main__ - INFO - Processing frame 109/375
+2025-06-20 00:59:44,201 - __main__ - INFO - Processing frame 110/375
+2025-06-20 00:59:44,639 - __main__ - INFO - Processing frame 111/375
+2025-06-20 00:59:45,071 - __main__ - INFO - Processing frame 112/375
+2025-06-20 00:59:45,552 - __main__ - INFO - Processing frame 113/375
+2025-06-20 00:59:46,017 - __main__ - INFO - Processing frame 114/375
+2025-06-20 00:59:46,515 - __main__ - INFO - Processing frame 115/375
+2025-06-20 00:59:47,037 - __main__ - INFO - Processing frame 116/375
+2025-06-20 00:59:47,573 - __main__ - INFO - Processing frame 117/375
+2025-06-20 00:59:48,114 - __main__ - INFO - Processing frame 118/375
+2025-06-20 00:59:48,654 - __main__ - INFO - Processing frame 119/375
+2025-06-20 00:59:49,201 - __main__ - INFO - Processing frame 120/375
+2025-06-20 00:59:49,624 - __main__ - INFO - Processing frame 121/375
+2025-06-20 00:59:50,076 - __main__ - INFO - Processing frame 122/375
+2025-06-20 00:59:50,525 - __main__ - INFO - Processing frame 123/375
+2025-06-20 00:59:50,916 - __main__ - INFO - Processing frame 124/375
+2025-06-20 00:59:51,337 - __main__ - INFO - Processing frame 125/375
+2025-06-20 00:59:51,768 - __main__ - INFO - Processing frame 126/375
+2025-06-20 00:59:52,239 - __main__ - INFO - Processing frame 127/375
+2025-06-20 00:59:52,663 - __main__ - INFO - Processing frame 128/375
+2025-06-20 00:59:53,090 - __main__ - INFO - Processing frame 129/375
+2025-06-20 00:59:53,509 - __main__ - INFO - Processing frame 130/375
+2025-06-20 00:59:53,936 - __main__ - INFO - Processing frame 131/375
+2025-06-20 00:59:54,439 - __main__ - INFO - Processing frame 132/375
+2025-06-20 00:59:54,879 - __main__ - INFO - Processing frame 133/375
+2025-06-20 00:59:55,345 - __main__ - INFO - Processing frame 134/375
+2025-06-20 00:59:55,788 - __main__ - INFO - Processing frame 135/375
+2025-06-20 00:59:56,210 - __main__ - INFO - Processing frame 136/375
+2025-06-20 00:59:56,735 - __main__ - INFO - Processing frame 137/375
+2025-06-20 00:59:57,175 - __main__ - INFO - Processing frame 138/375
+2025-06-20 00:59:57,598 - __main__ - INFO - Processing frame 139/375
+2025-06-20 00:59:58,050 - __main__ - INFO - Processing frame 140/375
+2025-06-20 00:59:58,488 - __main__ - INFO - Processing frame 141/375
+2025-06-20 00:59:58,968 - __main__ - INFO - Processing frame 142/375
+2025-06-20 00:59:59,476 - __main__ - INFO - Processing frame 143/375
+2025-06-20 00:59:59,936 - __main__ - INFO - Processing frame 144/375
+2025-06-20 01:00:00,395 - __main__ - INFO - Processing frame 145/375
+2025-06-20 01:00:00,829 - __main__ - INFO - Processing frame 146/375
+2025-06-20 01:00:01,324 - __main__ - INFO - Processing frame 147/375
+2025-06-20 01:00:01,879 - __main__ - INFO - Processing frame 148/375
+2025-06-20 01:00:02,443 - __main__ - INFO - Processing frame 149/375
+2025-06-20 01:00:03,010 - __main__ - INFO - Processing frame 150/375
+2025-06-20 01:00:03,590 - __main__ - INFO - Processing frame 151/375
+2025-06-20 01:00:04,155 - __main__ - INFO - Processing frame 152/375
+2025-06-20 01:00:04,739 - __main__ - INFO - Processing frame 153/375
+2025-06-20 01:00:05,323 - __main__ - INFO - Processing frame 154/375
+2025-06-20 01:00:05,833 - __main__ - INFO - Processing frame 155/375
+2025-06-20 01:00:06,341 - __main__ - INFO - Processing frame 156/375
+2025-06-20 01:00:06,824 - __main__ - INFO - Processing frame 157/375
+2025-06-20 01:00:07,318 - __main__ - INFO - Processing frame 158/375
+2025-06-20 01:00:07,849 - __main__ - INFO - Processing frame 159/375
+2025-06-20 01:00:08,365 - __main__ - INFO - Processing frame 160/375
+2025-06-20 01:00:08,819 - __main__ - INFO - Processing frame 161/375
+2025-06-20 01:00:09,310 - __main__ - INFO - Processing frame 162/375
+2025-06-20 01:00:09,819 - __main__ - INFO - Processing frame 163/375
+2025-06-20 01:00:10,389 - __main__ - INFO - Processing frame 164/375
+2025-06-20 01:00:10,869 - __main__ - INFO - Processing frame 165/375
+2025-06-20 01:00:11,380 - __main__ - INFO - Processing frame 166/375
+2025-06-20 01:00:11,830 - __main__ - INFO - Processing frame 167/375
+2025-06-20 01:00:12,332 - __main__ - INFO - Processing frame 168/375
+2025-06-20 01:00:12,778 - __main__ - INFO - Processing frame 169/375
+2025-06-20 01:00:13,309 - __main__ - INFO - Processing frame 170/375
+2025-06-20 01:00:13,832 - __main__ - INFO - Processing frame 171/375
+2025-06-20 01:00:14,342 - __main__ - INFO - Processing frame 172/375
+2025-06-20 01:00:14,912 - __main__ - INFO - Processing frame 173/375
+2025-06-20 01:00:15,468 - __main__ - INFO - Processing frame 174/375
+2025-06-20 01:00:15,944 - __main__ - INFO - Processing frame 175/375
+2025-06-20 01:00:16,463 - __main__ - INFO - Processing frame 176/375
+2025-06-20 01:00:16,965 - __main__ - INFO - Processing frame 177/375
+2025-06-20 01:00:17,465 - __main__ - INFO - Processing frame 178/375
+2025-06-20 01:00:17,951 - __main__ - INFO - Processing frame 179/375
+2025-06-20 01:00:18,512 - __main__ - INFO - Processing frame 180/375
+2025-06-20 01:00:19,120 - __main__ - INFO - Processing frame 181/375
+2025-06-20 01:00:19,712 - __main__ - INFO - Processing frame 182/375
+2025-06-20 01:00:20,295 - __main__ - INFO - Processing frame 183/375
+2025-06-20 01:00:20,916 - __main__ - INFO - Processing frame 184/375
+2025-06-20 01:00:21,534 - __main__ - INFO - Processing frame 185/375
+2025-06-20 01:00:22,071 - __main__ - INFO - Processing frame 186/375
+2025-06-20 01:00:22,662 - __main__ - INFO - Processing frame 187/375
+2025-06-20 01:00:23,164 - __main__ - INFO - Processing frame 188/375
+2025-06-20 01:00:23,710 - __main__ - INFO - Processing frame 189/375
+2025-06-20 01:00:24,269 - __main__ - INFO - Processing frame 190/375
+2025-06-20 01:00:24,778 - __main__ - INFO - Processing frame 191/375
+2025-06-20 01:00:25,266 - __main__ - INFO - Processing frame 192/375
+2025-06-20 01:00:25,786 - __main__ - INFO - Processing frame 193/375
+2025-06-20 01:00:26,331 - __main__ - INFO - Processing frame 194/375
+2025-06-20 01:00:26,820 - __main__ - INFO - Processing frame 195/375
+2025-06-20 01:00:27,279 - __main__ - INFO - Processing frame 196/375
+2025-06-20 01:00:27,762 - __main__ - INFO - Processing frame 197/375
+2025-06-20 01:00:28,337 - __main__ - INFO - Processing frame 198/375
+2025-06-20 01:00:28,826 - __main__ - INFO - Processing frame 199/375
+2025-06-20 01:00:29,330 - __main__ - INFO - Processing frame 200/375
+2025-06-20 01:00:29,965 - __main__ - INFO - Processing frame 201/375
+2025-06-20 01:00:30,535 - __main__ - INFO - Processing frame 202/375
+2025-06-20 01:00:31,066 - __main__ - INFO - Processing frame 203/375
+2025-06-20 01:00:31,603 - __main__ - INFO - Processing frame 204/375
+2025-06-20 01:00:32,142 - __main__ - INFO - Processing frame 205/375
+2025-06-20 01:00:32,632 - __main__ - INFO - Processing frame 206/375
+2025-06-20 01:00:33,136 - __main__ - INFO - Processing frame 207/375
+2025-06-20 01:00:33,672 - __main__ - INFO - Processing frame 208/375
+2025-06-20 01:00:34,285 - __main__ - INFO - Processing frame 209/375
+2025-06-20 01:00:34,939 - __main__ - INFO - Processing frame 210/375
+2025-06-20 01:00:35,544 - __main__ - INFO - Processing frame 211/375
+2025-06-20 01:00:36,145 - __main__ - INFO - Processing frame 212/375
+2025-06-20 01:00:36,739 - __main__ - INFO - Processing frame 213/375
+2025-06-20 01:00:37,358 - __main__ - INFO - Processing frame 214/375
+2025-06-20 01:00:37,888 - __main__ - INFO - Processing frame 215/375
+2025-06-20 01:00:38,404 - __main__ - INFO - Processing frame 216/375
+2025-06-20 01:00:38,891 - __main__ - INFO - Processing frame 217/375
+2025-06-20 01:00:39,438 - __main__ - INFO - Processing frame 218/375
+2025-06-20 01:00:39,905 - __main__ - INFO - Processing frame 219/375
+2025-06-20 01:00:40,383 - __main__ - INFO - Processing frame 220/375
+2025-06-20 01:00:40,839 - __main__ - INFO - Processing frame 221/375
+2025-06-20 01:00:41,293 - __main__ - INFO - Processing frame 222/375
+2025-06-20 01:00:41,864 - __main__ - INFO - Processing frame 223/375
+2025-06-20 01:00:42,356 - __main__ - INFO - Processing frame 224/375
+2025-06-20 01:00:42,849 - __main__ - INFO - Processing frame 225/375
+2025-06-20 01:00:43,360 - __main__ - INFO - Processing frame 226/375
+2025-06-20 01:00:43,877 - __main__ - INFO - Processing frame 227/375
+2025-06-20 01:00:44,389 - __main__ - INFO - Processing frame 228/375
+2025-06-20 01:00:44,842 - __main__ - INFO - Processing frame 229/375
+2025-06-20 01:00:45,313 - __main__ - INFO - Processing frame 230/375
+2025-06-20 01:00:45,833 - __main__ - INFO - Processing frame 231/375
+2025-06-20 01:00:46,368 - __main__ - INFO - Processing frame 232/375
+2025-06-20 01:00:46,880 - __main__ - INFO - Processing frame 233/375
+2025-06-20 01:00:47,412 - __main__ - INFO - Processing frame 234/375
+2025-06-20 01:00:47,887 - __main__ - INFO - Processing frame 235/375
+2025-06-20 01:00:48,433 - __main__ - INFO - Processing frame 236/375
+2025-06-20 01:00:48,907 - __main__ - INFO - Processing frame 237/375
+2025-06-20 01:00:49,385 - __main__ - INFO - Processing frame 238/375
+2025-06-20 01:00:49,841 - __main__ - INFO - Processing frame 239/375
+2025-06-20 01:00:50,415 - __main__ - INFO - Processing frame 240/375
+2025-06-20 01:00:50,991 - __main__ - INFO - Processing frame 241/375
+2025-06-20 01:00:51,603 - __main__ - INFO - Processing frame 242/375
+2025-06-20 01:00:52,208 - __main__ - INFO - Processing frame 243/375
+2025-06-20 01:00:52,834 - __main__ - INFO - Processing frame 244/375
+2025-06-20 01:00:53,449 - __main__ - INFO - Processing frame 245/375
+2025-06-20 01:00:53,967 - __main__ - INFO - Processing frame 246/375
+2025-06-20 01:00:54,449 - __main__ - INFO - Processing frame 247/375
+2025-06-20 01:00:54,965 - __main__ - INFO - Processing frame 248/375
+2025-06-20 01:00:55,460 - __main__ - INFO - Processing frame 249/375
+2025-06-20 01:00:55,919 - __main__ - INFO - Processing frame 250/375
+2025-06-20 01:00:56,419 - __main__ - INFO - Processing frame 251/375
+2025-06-20 01:00:56,887 - __main__ - INFO - Processing frame 252/375
+2025-06-20 01:00:57,419 - __main__ - INFO - Processing frame 253/375
+2025-06-20 01:00:57,959 - __main__ - INFO - Processing frame 254/375
+2025-06-20 01:00:58,424 - __main__ - INFO - Processing frame 255/375
+2025-06-20 01:00:58,925 - __main__ - INFO - Processing frame 256/375
+2025-06-20 01:00:59,437 - __main__ - INFO - Processing frame 257/375
+2025-06-20 01:00:59,894 - __main__ - INFO - Processing frame 258/375
+2025-06-20 01:01:00,399 - __main__ - INFO - Processing frame 259/375
+2025-06-20 01:01:00,876 - __main__ - INFO - Processing frame 260/375
+2025-06-20 01:01:01,368 - __main__ - INFO - Processing frame 261/375
+2025-06-20 01:01:01,870 - __main__ - INFO - Processing frame 262/375
+2025-06-20 01:01:02,343 - __main__ - INFO - Processing frame 263/375
+2025-06-20 01:01:02,824 - __main__ - INFO - Processing frame 264/375
+2025-06-20 01:01:03,344 - __main__ - INFO - Processing frame 265/375
+2025-06-20 01:01:03,865 - __main__ - INFO - Processing frame 266/375
+2025-06-20 01:01:04,401 - __main__ - INFO - Processing frame 267/375
+2025-06-20 01:01:04,889 - __main__ - INFO - Processing frame 268/375
+2025-06-20 01:01:05,372 - __main__ - INFO - Processing frame 269/375
+2025-06-20 01:01:05,841 - __main__ - INFO - Processing frame 270/375
+2025-06-20 01:01:06,421 - __main__ - INFO - Processing frame 271/375
+2025-06-20 01:01:07,021 - __main__ - INFO - Processing frame 272/375
+2025-06-20 01:01:07,619 - __main__ - INFO - Processing frame 273/375
+2025-06-20 01:01:08,241 - __main__ - INFO - Processing frame 274/375
+2025-06-20 01:01:08,848 - __main__ - INFO - Processing frame 275/375
+2025-06-20 01:01:09,417 - __main__ - INFO - Processing frame 276/375
+2025-06-20 01:01:09,901 - __main__ - INFO - Processing frame 277/375
+2025-06-20 01:01:10,396 - __main__ - INFO - Processing frame 278/375
+2025-06-20 01:01:10,932 - __main__ - INFO - Processing frame 279/375
+2025-06-20 01:01:11,436 - __main__ - INFO - Processing frame 280/375
+2025-06-20 01:01:11,914 - __main__ - INFO - Processing frame 281/375
+2025-06-20 01:01:12,394 - __main__ - INFO - Processing frame 282/375
+2025-06-20 01:01:12,913 - __main__ - INFO - Processing frame 283/375
+2025-06-20 01:01:13,395 - __main__ - INFO - Processing frame 284/375
+2025-06-20 01:01:13,914 - __main__ - INFO - Processing frame 285/375
+2025-06-20 01:01:14,434 - __main__ - INFO - Processing frame 286/375
+2025-06-20 01:01:14,940 - __main__ - INFO - Processing frame 287/375
+2025-06-20 01:01:15,450 - __main__ - INFO - Processing frame 288/375
+2025-06-20 01:01:15,922 - __main__ - INFO - Processing frame 289/375
+2025-06-20 01:01:16,431 - __main__ - INFO - Processing frame 290/375
+2025-06-20 01:01:16,915 - __main__ - INFO - Processing frame 291/375
+2025-06-20 01:01:17,434 - __main__ - INFO - Processing frame 292/375
+2025-06-20 01:01:17,917 - __main__ - INFO - Processing frame 293/375
+2025-06-20 01:01:18,399 - __main__ - INFO - Processing frame 294/375
+2025-06-20 01:01:18,936 - __main__ - INFO - Processing frame 295/375
+2025-06-20 01:01:19,486 - __main__ - INFO - Processing frame 296/375
+2025-06-20 01:01:19,973 - __main__ - INFO - Processing frame 297/375
+2025-06-20 01:01:20,442 - __main__ - INFO - Processing frame 298/375
+2025-06-20 01:01:20,908 - __main__ - INFO - Processing frame 299/375
+2025-06-20 01:01:21,384 - __main__ - INFO - Processing frame 300/375
+2025-06-20 01:01:21,912 - __main__ - INFO - Processing frame 301/375
+2025-06-20 01:01:22,460 - __main__ - INFO - Processing frame 302/375
+2025-06-20 01:01:23,054 - __main__ - INFO - Processing frame 303/375
+2025-06-20 01:01:23,642 - __main__ - INFO - Processing frame 304/375
+2025-06-20 01:01:24,271 - __main__ - INFO - Processing frame 305/375
+2025-06-20 01:01:24,865 - __main__ - INFO - Processing frame 306/375
+2025-06-20 01:01:25,470 - __main__ - INFO - Processing frame 307/375
+2025-06-20 01:01:25,956 - __main__ - INFO - Processing frame 308/375
+2025-06-20 01:01:26,498 - __main__ - INFO - Processing frame 309/375
+2025-06-20 01:01:26,988 - __main__ - INFO - Processing frame 310/375
+2025-06-20 01:01:27,467 - __main__ - INFO - Processing frame 311/375
+2025-06-20 01:01:27,928 - __main__ - INFO - Processing frame 312/375
+2025-06-20 01:01:28,447 - __main__ - INFO - Processing frame 313/375
+2025-06-20 01:01:28,951 - __main__ - INFO - Processing frame 314/375
+2025-06-20 01:01:29,500 - __main__ - INFO - Processing frame 315/375
+2025-06-20 01:01:30,155 - __main__ - INFO - Processing frame 316/375
+2025-06-20 01:01:30,699 - __main__ - INFO - Processing frame 317/375
+2025-06-20 01:01:31,185 - __main__ - INFO - Processing frame 318/375
+2025-06-20 01:01:31,674 - __main__ - INFO - Processing frame 319/375
+2025-06-20 01:01:32,118 - __main__ - INFO - Processing frame 320/375
+2025-06-20 01:01:32,563 - __main__ - INFO - Processing frame 321/375
+2025-06-20 01:01:33,104 - __main__ - INFO - Processing frame 322/375
+2025-06-20 01:01:33,570 - __main__ - INFO - Processing frame 323/375
+2025-06-20 01:01:34,067 - __main__ - INFO - Processing frame 324/375
+2025-06-20 01:01:34,561 - __main__ - INFO - Processing frame 325/375
+2025-06-20 01:01:35,155 - __main__ - INFO - Processing frame 326/375
+2025-06-20 01:01:35,712 - __main__ - INFO - Processing frame 327/375
+2025-06-20 01:01:36,250 - __main__ - INFO - Processing frame 328/375
+2025-06-20 01:01:36,719 - __main__ - INFO - Processing frame 329/375
+2025-06-20 01:01:37,181 - __main__ - INFO - Processing frame 330/375
+2025-06-20 01:01:37,686 - __main__ - INFO - Processing frame 331/375
+2025-06-20 01:01:38,197 - __main__ - INFO - Processing frame 332/375
+2025-06-20 01:01:38,803 - __main__ - INFO - Processing frame 333/375
+2025-06-20 01:01:39,409 - __main__ - INFO - Processing frame 334/375
+2025-06-20 01:01:40,039 - __main__ - INFO - Processing frame 335/375
+2025-06-20 01:01:40,638 - __main__ - INFO - Processing frame 336/375
+2025-06-20 01:01:41,238 - __main__ - INFO - Processing frame 337/375
+2025-06-20 01:01:41,768 - __main__ - INFO - Processing frame 338/375
+2025-06-20 01:01:42,283 - __main__ - INFO - Processing frame 339/375
+2025-06-20 01:01:42,773 - __main__ - INFO - Processing frame 340/375
+2025-06-20 01:01:43,230 - __main__ - INFO - Processing frame 341/375
+2025-06-20 01:01:43,727 - __main__ - INFO - Processing frame 342/375
+2025-06-20 01:01:44,258 - __main__ - INFO - Processing frame 343/375
+2025-06-20 01:01:44,729 - __main__ - INFO - Processing frame 344/375
+2025-06-20 01:01:45,175 - __main__ - INFO - Processing frame 345/375
+2025-06-20 01:01:45,687 - __main__ - INFO - Processing frame 346/375
+2025-06-20 01:01:46,198 - __main__ - INFO - Processing frame 347/375
+2025-06-20 01:01:46,723 - __main__ - INFO - Processing frame 348/375
+2025-06-20 01:01:47,217 - __main__ - INFO - Processing frame 349/375
+2025-06-20 01:01:47,700 - __main__ - INFO - Processing frame 350/375
+2025-06-20 01:01:48,170 - __main__ - INFO - Processing frame 351/375
+2025-06-20 01:01:48,697 - __main__ - INFO - Processing frame 352/375
+2025-06-20 01:01:49,183 - __main__ - INFO - Processing frame 353/375
+2025-06-20 01:01:49,799 - __main__ - INFO - Processing frame 354/375
+2025-06-20 01:01:50,436 - __main__ - INFO - Processing frame 355/375
+2025-06-20 01:01:51,074 - __main__ - INFO - Processing frame 356/375
+2025-06-20 01:01:51,680 - __main__ - INFO - Processing frame 357/375
+2025-06-20 01:01:52,206 - __main__ - INFO - Processing frame 358/375
+2025-06-20 01:01:52,719 - __main__ - INFO - Processing frame 359/375
+2025-06-20 01:01:53,313 - __main__ - INFO - Processing frame 360/375
+2025-06-20 01:01:53,924 - __main__ - INFO - Processing frame 361/375
+2025-06-20 01:01:54,507 - __main__ - INFO - Processing frame 362/375
+2025-06-20 01:01:55,108 - __main__ - INFO - Processing frame 363/375
+2025-06-20 01:01:55,720 - __main__ - INFO - Processing frame 364/375
+2025-06-20 01:01:56,344 - __main__ - INFO - Processing frame 365/375
+2025-06-20 01:01:56,929 - __main__ - INFO - Processing frame 366/375
+2025-06-20 01:01:57,512 - __main__ - INFO - Processing frame 367/375
+2025-06-20 01:01:58,028 - __main__ - INFO - Processing frame 368/375
+2025-06-20 01:01:58,523 - __main__ - INFO - Processing frame 369/375
+2025-06-20 01:01:58,965 - __main__ - INFO - Processing frame 370/375
+2025-06-20 01:01:59,420 - __main__ - INFO - Processing frame 371/375
+2025-06-20 01:01:59,935 - __main__ - INFO - Processing frame 372/375
+2025-06-20 01:02:00,431 - __main__ - INFO - Processing frame 373/375
+2025-06-20 01:02:00,943 - __main__ - INFO - Processing frame 374/375
+2025-06-20 01:02:01,493 - __main__ - INFO - Processing frame 375/375
+2025-06-20 01:02:02,073 - __main__ - INFO - Saving output video: D:/Projects2.0/Listai/player-reid/output_tracked.mp4
+2025-06-20 01:02:08,377 - utils.video_io - INFO - Video saved with audio: D:/Projects2.0/Listai/player-reid/output_tracked.mp4
+2025-06-20 01:02:08,377 - utils.video_io - INFO - Video saved: D:/Projects2.0/Listai/player-reid/output_tracked.mp4 (375 frames, 25 FPS)
+2025-06-20 01:02:08,378 - __main__ - INFO - Player re-identification completed successfully!
+2025-06-20 01:02:08,378 - __main__ - INFO - Tracking statistics: {'total_frames': 375, 'total_detections': 111, 'total_tracks': 4, 'active_tracks': 1, 'disappeared_tracks': 0}
+2025-06-20 01:16:49,779 - __main__ - INFO - Initializing player tracker...
+2025-06-20 01:16:50,020 - tracking.tracker - INFO - PlayerTracker initialized with model: D:/Projects2.0/Listai/player-reid/models/best.pt
+2025-06-20 01:16:50,020 - __main__ - INFO - Initializing video processor...
+2025-06-20 01:16:50,253 - utils.video_io - INFO - Video loaded: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:16:50,253 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 01:16:50,253 - utils.video_io - INFO - Audio track detected and loaded
+2025-06-20 01:16:50,254 - __main__ - INFO - Initializing visualizer...
+2025-06-20 01:16:50,254 - __main__ - INFO - Processing video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:16:50,951 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 01:16:50,951 - __main__ - INFO - Processing frame 1/375
+2025-06-20 01:16:54,838 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:54,839 - __main__ - INFO - Processing frame 2/375
+2025-06-20 01:16:55,387 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:55,388 - __main__ - INFO - Processing frame 3/375
+2025-06-20 01:16:55,968 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:55,969 - __main__ - INFO - Processing frame 4/375
+2025-06-20 01:16:56,473 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:56,475 - __main__ - INFO - Processing frame 5/375
+2025-06-20 01:16:57,025 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:57,026 - __main__ - INFO - Processing frame 6/375
+2025-06-20 01:16:57,546 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:57,547 - __main__ - INFO - Processing frame 7/375
+2025-06-20 01:16:58,014 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:58,015 - __main__ - INFO - Processing frame 8/375
+2025-06-20 01:16:58,483 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:58,484 - __main__ - INFO - Processing frame 9/375
+2025-06-20 01:16:58,939 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:58,940 - __main__ - INFO - Processing frame 10/375
+2025-06-20 01:16:59,428 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:59,429 - __main__ - INFO - Processing frame 11/375
+2025-06-20 01:16:59,851 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:16:59,852 - __main__ - INFO - Processing frame 12/375
+2025-06-20 01:17:00,354 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:00,355 - __main__ - INFO - Processing frame 13/375
+2025-06-20 01:17:00,827 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:00,828 - __main__ - INFO - Processing frame 14/375
+2025-06-20 01:17:01,269 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:01,270 - __main__ - INFO - Processing frame 15/375
+2025-06-20 01:17:01,748 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:01,749 - __main__ - INFO - Processing frame 16/375
+2025-06-20 01:17:02,193 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:02,194 - __main__ - INFO - Processing frame 17/375
+2025-06-20 01:17:02,643 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:02,644 - __main__ - INFO - Processing frame 18/375
+2025-06-20 01:17:03,153 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:03,154 - __main__ - INFO - Processing frame 19/375
+2025-06-20 01:17:03,637 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:03,638 - __main__ - INFO - Processing frame 20/375
+2025-06-20 01:17:04,124 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:04,125 - __main__ - INFO - Processing frame 21/375
+2025-06-20 01:17:04,648 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:04,649 - __main__ - INFO - Processing frame 22/375
+2025-06-20 01:17:05,111 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:05,112 - __main__ - INFO - Processing frame 23/375
+2025-06-20 01:17:05,559 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:05,560 - __main__ - INFO - Processing frame 24/375
+2025-06-20 01:17:06,020 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:06,021 - __main__ - INFO - Processing frame 25/375
+2025-06-20 01:17:06,498 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:06,499 - __main__ - INFO - Processing frame 26/375
+2025-06-20 01:17:06,950 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:06,950 - __main__ - INFO - Processing frame 27/375
+2025-06-20 01:17:07,401 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:17:07,402 - __main__ - INFO - Processing frame 28/375
+2025-06-20 01:19:20,473 - __main__ - INFO - Initializing player tracker...
+2025-06-20 01:19:20,662 - tracking.tracker - INFO - PlayerTracker initialized with model: D:/Projects2.0/Listai/player-reid/models/best.pt
+2025-06-20 01:19:20,662 - __main__ - INFO - Initializing video processor...
+2025-06-20 01:19:20,889 - utils.video_io - INFO - Video loaded: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:19:20,889 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 01:19:20,889 - utils.video_io - INFO - Audio track detected and loaded
+2025-06-20 01:19:20,889 - __main__ - INFO - Initializing visualizer...
+2025-06-20 01:19:20,889 - __main__ - INFO - Processing video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:19:21,595 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 01:19:24,690 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:25,143 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:25,521 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:25,942 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:26,412 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:26,860 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:27,282 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:27,728 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:28,169 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:28,600 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:29,103 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:29,572 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:30,015 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:30,461 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:30,907 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:31,422 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:31,950 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:32,404 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:32,834 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:33,315 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:33,809 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:34,280 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:34,737 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:35,209 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:46,999 - __main__ - INFO - Initializing player tracker...
+2025-06-20 01:19:47,169 - tracking.tracker - INFO - PlayerTracker initialized with model: D:/Projects2.0/Listai/player-reid/models/best.pt
+2025-06-20 01:19:47,170 - __main__ - INFO - Initializing video processor...
+2025-06-20 01:19:47,404 - utils.video_io - INFO - Video loaded: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:19:47,405 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 01:19:47,405 - utils.video_io - INFO - Audio track detected and loaded
+2025-06-20 01:19:47,405 - __main__ - INFO - Initializing visualizer...
+2025-06-20 01:19:47,405 - __main__ - INFO - Processing video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:19:48,107 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 01:19:51,135 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:51,576 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:51,983 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:52,422 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:52,867 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:53,344 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:53,786 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:54,209 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:54,668 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:55,142 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:55,587 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:56,028 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:56,501 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:56,930 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:57,404 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:57,840 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:58,265 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:58,684 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:59,130 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:19:59,685 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:00,220 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:00,757 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:01,293 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:01,838 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:02,358 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:02,898 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:03,438 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:03,877 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:04,360 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:04,834 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:05,274 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:05,715 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:06,182 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:06,633 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:07,100 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:07,589 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:08,032 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:08,491 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:08,951 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:09,365 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:09,789 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:10,243 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:10,735 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:11,218 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:11,791 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:12,273 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:12,760 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:13,226 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:13,688 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:14,136 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:20:14,609 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:04,200 - __main__ - INFO - Initializing player tracker...
+2025-06-20 01:21:04,388 - tracking.tracker - INFO - PlayerTracker initialized with model: D:/Projects2.0/Listai/player-reid/models/best.pt
+2025-06-20 01:21:04,389 - __main__ - INFO - Initializing video processor...
+2025-06-20 01:21:04,625 - utils.video_io - INFO - Video loaded: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:21:04,626 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 01:21:04,626 - utils.video_io - INFO - Audio track detected and loaded
+2025-06-20 01:21:04,626 - __main__ - INFO - Initializing visualizer...
+2025-06-20 01:21:04,627 - __main__ - INFO - Processing video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:21:05,332 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 01:21:08,543 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:09,067 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:09,568 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:10,076 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:10,603 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:11,142 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:11,667 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:12,201 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:12,739 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:13,268 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:13,787 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:14,339 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:14,901 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:15,424 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:15,958 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:16,499 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:17,038 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:17,579 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:18,121 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:18,664 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:19,220 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:19,775 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:20,316 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:20,851 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:21,402 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:21,939 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:22,469 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:23,003 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:23,551 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:24,092 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:24,621 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:25,159 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:25,702 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:26,231 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:26,777 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:27,319 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:27,859 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:28,404 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:28,931 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:29,455 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:29,991 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:30,545 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:31,081 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:31,697 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:32,270 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:32,806 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:33,338 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:33,864 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:34,405 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:34,941 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:35,474 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:36,016 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:36,552 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:37,096 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:37,628 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:38,168 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:38,710 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:39,251 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:39,790 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:40,316 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:40,854 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:41,406 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:41,940 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:42,482 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:43,011 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:43,559 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:44,087 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:44,618 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:45,149 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:45,696 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:46,240 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:46,772 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:47,311 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:47,854 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:48,382 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:48,923 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:49,465 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:50,009 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:50,546 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:51,081 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:51,618 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:52,154 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:52,706 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:53,238 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:54,304 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:54,849 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:55,378 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:55,913 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:56,447 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:57,009 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:58,058 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:58,602 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:59,152 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:21:59,690 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:00,230 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:00,768 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:01,317 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:01,847 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:02,391 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:02,918 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:03,466 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:04,002 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:04,540 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:05,072 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:05,607 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:06,139 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:06,677 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:07,213 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:07,763 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:08,304 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:08,844 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:09,382 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:09,922 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:10,459 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:11,000 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:11,536 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:12,077 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:12,619 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:13,152 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:13,687 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:14,230 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:14,782 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:15,310 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:15,844 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:16,375 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:16,922 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:17,457 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:18,013 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:18,563 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:19,112 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:19,642 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:20,172 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:20,699 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:21,246 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:21,783 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:22,328 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:22,855 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:23,405 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:23,941 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:24,472 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:25,003 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:25,544 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:26,087 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:26,622 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:27,158 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:27,721 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:28,261 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:28,801 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:29,334 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:29,873 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:30,411 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:30,945 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:31,472 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:32,053 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:32,618 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:33,159 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:33,687 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:34,246 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:34,810 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:35,338 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:35,891 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:36,468 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:37,063 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:37,614 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:38,158 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:38,703 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:39,277 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:39,840 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:40,386 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:40,942 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:41,515 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:42,077 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:42,649 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:43,228 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:43,816 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:44,394 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:44,971 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:45,537 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:46,115 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:46,693 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:47,275 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:47,869 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:48,438 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:49,048 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:49,641 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:50,245 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:50,834 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:51,416 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:52,002 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:52,590 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:22:53,166 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:41:20,149 - __main__ - INFO - Initializing player tracker...
+2025-06-20 01:41:20,149 - tracking.tracker - INFO - Successfully patched ultralytics for PyTorch 2.6 compatibility
+2025-06-20 01:41:20,267 - __main__ - ERROR - Error during processing: too many values to unpack (expected 2)
+2025-06-20 01:43:04,864 - __main__ - INFO - Initializing player tracker...
+2025-06-20 01:43:04,865 - tracking.tracker - INFO - Successfully patched ultralytics for PyTorch 2.6 compatibility
+2025-06-20 01:43:05,085 - tracking.tracker - INFO - PlayerTracker initialized with model: D:/Projects2.0/Listai/player-reid/models/best.pt
+2025-06-20 01:43:05,085 - __main__ - INFO - Initializing video processor...
+2025-06-20 01:43:05,344 - utils.video_io - INFO - Video loaded: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:43:05,345 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 01:43:05,345 - utils.video_io - INFO - Audio track detected and loaded
+2025-06-20 01:43:05,345 - __main__ - INFO - Initializing visualizer...
+2025-06-20 01:43:05,345 - __main__ - INFO - Processing video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:43:06,512 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 01:46:57,673 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:46:58,975 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:46:59,631 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 01:46:59,632 - __main__ - INFO - Detection Statistics:
+2025-06-20 01:46:59,633 - __main__ - INFO - - Average detections per frame: 12.00
+2025-06-20 01:46:59,633 - __main__ - INFO - - Frames with detections: 99.2%
+2025-06-20 01:46:59,633 - __main__ - INFO - Saving output video: D:/Projects2.0/Listai/player-reid/output_tracked.mp4
+2025-06-20 01:47:07,011 - utils.video_io - INFO - Video saved with audio: D:/Projects2.0/Listai/player-reid/output_tracked.mp4
+2025-06-20 01:47:07,011 - utils.video_io - INFO - Video saved: D:/Projects2.0/Listai/player-reid/output_tracked.mp4 (375 frames, 25 FPS)
+2025-06-20 01:47:07,011 - __main__ - INFO - Player re-identification completed successfully!
+2025-06-20 01:47:07,012 - __main__ - INFO - Tracking statistics: {'total_frames': 375, 'total_detections': 2892, 'total_tracks': 24, 'active_tracks': 12, 'disappeared_tracks': 11}
+2025-06-20 01:59:50,974 - __main__ - INFO - Initializing player tracker...
+2025-06-20 01:59:50,974 - tracking.tracker - INFO - Successfully patched ultralytics for PyTorch 2.6 compatibility
+2025-06-20 01:59:51,176 - tracking.tracker - INFO - PlayerTracker initialized with model: D:/Projects2.0/Listai/player-reid/models/best.pt
+2025-06-20 01:59:51,177 - __main__ - INFO - Initializing video processor...
+2025-06-20 01:59:51,431 - utils.video_io - INFO - Video loaded: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:59:51,431 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 01:59:51,431 - utils.video_io - INFO - Audio track detected and loaded
+2025-06-20 01:59:51,431 - __main__ - INFO - Initializing visualizer...
+2025-06-20 01:59:51,431 - __main__ - INFO - Processing video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 01:59:52,460 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 02:03:34,645 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 02:03:35,947 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 02:03:36,635 - tracking.tracker - WARNING - No player detections found in frame
+2025-06-20 02:03:36,637 - __main__ - INFO - Detection Statistics:
+2025-06-20 02:03:36,637 - __main__ - INFO - - Average detections per frame: 12.01
+2025-06-20 02:03:36,638 - __main__ - INFO - - Frames with detections: 99.2%
+2025-06-20 02:03:36,638 - __main__ - INFO - Saving output video: D:/Projects2.0/Listai/player-reid/output_tracked.mp4
+2025-06-20 02:03:44,032 - utils.video_io - INFO - Video saved with audio: D:/Projects2.0/Listai/player-reid/output_tracked.mp4
+2025-06-20 02:03:44,033 - utils.video_io - INFO - Video saved: D:/Projects2.0/Listai/player-reid/output_tracked.mp4 (375 frames, 25 FPS)
+2025-06-20 02:03:44,033 - __main__ - INFO - Player re-identification completed successfully!
+2025-06-20 02:03:44,033 - __main__ - INFO - Tracking statistics: {'total_frames': 375, 'total_detections': 2892, 'total_tracks': 22, 'active_tracks': 11, 'disappeared_tracks': 10}
