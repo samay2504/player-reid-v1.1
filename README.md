@@ -5,7 +5,7 @@ A robust system for tracking and re-identifying soccer players in video feeds, m
 ## Important Note About Model File
 
 ⚠️ The YOLO model file (`best.pt`, ~185MB) is not included in this repository due to size limitations. You can download it from:
-[Google Drive Link - best.pt](your_google_drive_link_here)
+[Google Drive Link - best.pt](https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePVcMD/view)
 
 After downloading, place the file in the `models/` directory:
 ```bash
