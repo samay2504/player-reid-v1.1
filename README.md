@@ -55,7 +55,7 @@ player-reid/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/samay2504/Player-REID
 cd player-reid
 ```
 
