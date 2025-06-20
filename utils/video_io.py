@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import logging
 from typing import List, Tuple
-from moviepy.editor import VideoFileClip, AudioFileClip
+from moviepy.editor import VideoFileClip
 import tempfile
 import os
 
@@ -10,6 +10,9 @@ logger = logging.getLogger(__name__)
 
 class VideoProcessor:
     def __init__(self, video_path: str):
+        if not os.path.exists(video_path):
+            raise FileNotFoundError(f"Video file not found: {video_path}")
+        
         self.video_path = video_path
         self.cap = cv2.VideoCapture(video_path)
         
@@ -21,7 +24,6 @@ class VideoProcessor:
         self.width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         self.height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         
-        # Load audio if available
         try:
             self.video_clip = VideoFileClip(video_path)
             self.has_audio = self.video_clip.audio is not None
@@ -48,6 +50,9 @@ class VideoProcessor:
         return frames
     
     def get_frame_at(self, frame_number: int) -> np.ndarray:
+        if frame_number < 0 or frame_number >= self.frame_count:
+            raise ValueError(f"Frame number {frame_number} out of range [0, {self.frame_count})")
+        
         self.cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
         ret, frame = self.cap.read()
         
@@ -74,7 +79,6 @@ class VideoProcessor:
         
         height, width = frames[0].shape[:2]
         
-        # Save frames to temporary file first
         temp_output = tempfile.mktemp(suffix='.mp4')
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         out = cv2.VideoWriter(temp_output, fourcc, fps, (width, height))
@@ -84,20 +88,13 @@ class VideoProcessor:
         
         out.release()
         
-        # If original video had audio, copy it to the new video
         if hasattr(self, 'has_audio') and self.has_audio:
             try:
-                # Load the temporary video
                 temp_clip = VideoFileClip(temp_output)
-                
-                # Copy audio from original video
                 final_clip = temp_clip.set_audio(self.video_clip.audio)
-                
-                # Write final video with audio
                 final_clip.write_videofile(output_path, codec='libx264', 
                                         audio_codec='aac', fps=fps)
                 
-                # Clean up
                 temp_clip.close()
                 final_clip.close()
                 if os.path.exists(temp_output):
@@ -106,11 +103,9 @@ class VideoProcessor:
                 logger.info(f"Video saved with audio: {output_path}")
             except Exception as e:
                 logger.error(f"Failed to add audio to video, saving without audio: {e}")
-                # If audio processing fails, just use the temporary file
                 if os.path.exists(temp_output):
                     os.replace(temp_output, output_path)
         else:
-            # No audio to add, just use the temporary file
             if os.path.exists(temp_output):
                 os.replace(temp_output, output_path)
         

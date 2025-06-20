@@ -120,13 +120,12 @@ class ResultVisualizer:
         return annotated_frame
     
     def add_debug_info(self, frame: np.ndarray, text: str) -> None:
-        """Add debug information to the frame"""
         cv2.putText(
             frame,
             text,
-            (10, frame.shape[0] - 10),  # Bottom-left corner
+            (10, frame.shape[0] - 10),
             self.font,
             self.font_scale,
-            (0, 255, 255),  # Yellow color
+            (0, 255, 255),
             self.text_thickness
         )

@@ -1,65 +1,95 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+import logging
+import argparse
 import cv2
 import numpy as np
+from pathlib import Path
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from safe_loader import safe_yolo_load
 
-def test_yolo_model(model_path, video_path, output_path="test_detections.jpg"):
+logger = logging.getLogger(__name__)
+
+def test_yolo_model(model_path: str, video_path: str, output_path: str = "test_detections.jpg"):
     """Test YOLO model on first frame of video"""
     
-    # Load model
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(f"Model file not found: {model_path}")
+    
+    if not os.path.exists(video_path):
+        raise FileNotFoundError(f"Video file not found: {video_path}")
+    
+    logger.info(f"Loading model from: {model_path}")
     model = safe_yolo_load(model_path)
     
-    # Load first frame
+    logger.info(f"Loading video from: {video_path}")
     cap = cv2.VideoCapture(video_path)
     ret, frame = cap.read()
     cap.release()
     
     if not ret:
-        print("Could not read video frame")
-        return
+        raise ValueError("Could not read video frame")
     
-    print(f"Frame shape: {frame.shape}")
+    logger.info(f"Frame shape: {frame.shape}")
     
-    # Run detection with very low confidence
-    results = model(frame, conf=0.01, verbose=True)
+    logger.info("Running detection with low confidence threshold...")
+    results = model(frame, conf=0.01, verbose=False)
     
-    print(f"Number of results: {len(results)}")
+    logger.info(f"Number of results: {len(results)}")
     
-    # Process results
+    detection_count = 0
     for i, result in enumerate(results):
-        print(f"\nResult {i}:")
+        logger.info(f"Result {i}:")
         boxes = result.boxes
         
         if boxes is not None:
-            print(f"  Number of boxes: {len(boxes)}")
+            logger.info(f"  Number of boxes: {len(boxes)}")
             
-            # Draw all detections
             for j, box in enumerate(boxes):
                 cls = int(box.cls[0])
                 conf = float(box.conf[0])
                 x1, y1, x2, y2 = box.xyxy[0].cpu().numpy().astype(int)
                 
-                print(f"    Box {j}: class={cls}, conf={conf:.3f}, bbox=({x1},{y1},{x2},{y2})")
+                logger.info(f"    Box {j}: class={cls}, conf={conf:.3f}, bbox=({x1},{y1},{x2},{y2})")
                 
-                # Draw bounding box
-                color = (0, 255, 0) if cls == 0 else (255, 0, 0)  # Green for person, red for others
+                color = (0, 255, 0) if cls == 2 else (255, 0, 0)
                 cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
                 
-                # Add label
                 label = f"cls:{cls} conf:{conf:.2f}"
                 cv2.putText(frame, label, (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
+                detection_count += 1
         else:
-            print("  No boxes found")
+            logger.info("  No boxes found")
     
-    # Save result
     cv2.imwrite(output_path, frame)
-    print(f"\nDetection result saved to: {output_path}")
+    logger.info(f"Detection result saved to: {output_path}")
+    logger.info(f"Total detections: {detection_count}")
+    
+    return detection_count
+
+def main():
+    parser = argparse.ArgumentParser(description='Test YOLO model on video')
+    parser.add_argument('--model', type=str, 
+                       default='D:/Projects2.0/Listai/models/best.pt',
+                       help='Path to YOLO model')
+    parser.add_argument('--video', type=str,
+                       default='D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4',
+                       help='Path to input video')
+    parser.add_argument('--output', type=str,
+                       default='test_detections.jpg',
+                       help='Output image path')
+    
+    args = parser.parse_args()
+    
+    try:
+        test_yolo_model(args.model, args.video, args.output)
+        logger.info("YOLO test completed successfully")
+    except Exception as e:
+        logger.error(f"YOLO test failed: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
-    model_path = "D:/Projects2.0/Listai/player-reid/models/best.pt"
-    video_path = "D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4"
-    
-    test_yolo_model(model_path, video_path)
+    logging.basicConfig(level=logging.INFO)
+    main()

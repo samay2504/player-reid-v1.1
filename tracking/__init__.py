@@ -1,3 +1,3 @@
-from .tracker import PlayerTracker
+from .tracker import EnhancedPlayerTracker
 
-__all__ = ['PlayerTracker']
+__all__ = ['EnhancedPlayerTracker']

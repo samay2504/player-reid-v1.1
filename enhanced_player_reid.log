@@ -1,0 +1,383 @@
+2025-06-20 22:27:55,947 - __main__ - INFO - === Enhanced Player Re-identification System ===
+2025-06-20 22:27:55,947 - __main__ - INFO - Input video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 22:27:55,947 - __main__ - INFO - Output video: D:/Projects2.0/Listai/player-reid/enhanced_output_tracked.mp4
+2025-06-20 22:27:55,947 - __main__ - INFO - Model: D:/Projects2.0/Listai/models/best.pt
+2025-06-20 22:27:55,947 - __main__ - INFO - Configuration:
+2025-06-20 22:27:55,947 - __main__ - INFO -   - Confidence threshold: 0.35
+2025-06-20 22:27:55,948 - __main__ - INFO -   - Max disappeared frames: 60
+2025-06-20 22:27:55,948 - __main__ - INFO -   - Max distance: 200.0
+2025-06-20 22:27:55,958 - __main__ - INFO -   - Re-ID threshold: 0.65
+2025-06-20 22:27:55,958 - __main__ - INFO - Initializing enhanced player tracker...
+2025-06-20 22:27:55,958 - tracking.tracker - INFO - Successfully patched ultralytics for PyTorch 2.6 compatibility
+2025-06-20 22:27:56,215 - safe_loader - INFO - Successfully loaded YOLO model from D:/Projects2.0/Listai/models/best.pt
+2025-06-20 22:27:56,216 - tracking.tracker - INFO - EnhancedPlayerTracker initialized with model: D:/Projects2.0/Listai/models/best.pt
+2025-06-20 22:27:56,216 - __main__ - INFO - Initializing video processor...
+2025-06-20 22:27:56,523 - utils.video_io - INFO - Video loaded: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 22:27:56,524 - utils.video_io - INFO - Resolution: 1280x720, FPS: 25, Frames: 375
+2025-06-20 22:27:56,524 - utils.video_io - INFO - Audio track detected and loaded
+2025-06-20 22:27:56,524 - __main__ - INFO - Initializing visualizer...
+2025-06-20 22:27:56,524 - __main__ - INFO - Processing video: D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4
+2025-06-20 22:27:57,565 - utils.video_io - INFO - Loaded 375 frames from video
+2025-06-20 22:27:57,566 - __main__ - INFO - Video properties: 375 frames, 25 FPS, (1280, 720)
+2025-06-20 22:28:01,104 - tracking.tracker - INFO - Initialized new player 0
+2025-06-20 22:28:01,105 - tracking.tracker - INFO - Initialized new player 1
+2025-06-20 22:28:01,105 - tracking.tracker - INFO - Initialized new player 2
+2025-06-20 22:28:01,105 - tracking.tracker - INFO - Initialized new player 3
+2025-06-20 22:28:01,105 - tracking.tracker - INFO - Initialized new player 4
+2025-06-20 22:28:01,105 - tracking.tracker - INFO - Initialized new player 5
+2025-06-20 22:28:01,105 - tracking.tracker - INFO - Initialized new player 6
+2025-06-20 22:28:01,105 - tracking.tracker - INFO - Initialized new player 7
+2025-06-20 22:28:01,106 - tracking.tracker - INFO - Initialized new player 8
+2025-06-20 22:28:01,106 - tracking.tracker - INFO - Initialized new player 9
+2025-06-20 22:28:01,106 - tracking.tracker - INFO - Initialized new player 10
+2025-06-20 22:28:01,106 - tracking.tracker - INFO - Initialized new player 11
+2025-06-20 22:28:01,106 - tracking.tracker - INFO - Initialized new player 12
+2025-06-20 22:28:01,106 - tracking.tracker - INFO - Initialized new player 13
+2025-06-20 22:28:01,516 - tracking.tracker - INFO - Created new player track 14
+2025-06-20 22:28:01,944 - tracking.tracker - INFO - Created new player track 15
+2025-06-20 22:28:02,409 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.940
+2025-06-20 22:28:03,322 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.936
+2025-06-20 22:28:03,739 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.928
+2025-06-20 22:28:03,741 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.980
+2025-06-20 22:28:04,242 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.968
+2025-06-20 22:28:04,701 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.940
+2025-06-20 22:28:05,175 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.954
+2025-06-20 22:28:06,541 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.978
+2025-06-20 22:28:06,542 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.935
+2025-06-20 22:28:07,475 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.954
+2025-06-20 22:28:07,876 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.976
+2025-06-20 22:28:07,878 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.971
+2025-06-20 22:28:07,879 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.945
+2025-06-20 22:28:07,885 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.960
+2025-06-20 22:28:07,886 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.960
+2025-06-20 22:28:08,308 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.787
+2025-06-20 22:28:08,756 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.960
+2025-06-20 22:28:08,758 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.959
+2025-06-20 22:28:09,649 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.800
+2025-06-20 22:28:11,069 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.916
+2025-06-20 22:28:11,579 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.944
+2025-06-20 22:28:12,011 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.993
+2025-06-20 22:28:12,517 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.969
+2025-06-20 22:28:12,519 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.980
+2025-06-20 22:28:12,521 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.803
+2025-06-20 22:28:13,566 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.993
+2025-06-20 22:28:14,927 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.920
+2025-06-20 22:28:14,929 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.936
+2025-06-20 22:28:15,430 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.961
+2025-06-20 22:28:15,889 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.949
+2025-06-20 22:28:15,892 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.912
+2025-06-20 22:28:15,894 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.787
+2025-06-20 22:28:15,897 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.923
+2025-06-20 22:28:16,389 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.986
+2025-06-20 22:28:16,864 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.986
+2025-06-20 22:28:17,894 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.887
+2025-06-20 22:28:18,367 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.983
+2025-06-20 22:28:18,841 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.902
+2025-06-20 22:28:19,741 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.806
+2025-06-20 22:28:19,743 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.913
+2025-06-20 22:28:20,686 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.986
+2025-06-20 22:28:21,711 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.916
+2025-06-20 22:28:22,782 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.786
+2025-06-20 22:28:23,325 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.880
+2025-06-20 22:28:24,264 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.767
+2025-06-20 22:28:25,303 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.765
+2025-06-20 22:28:25,779 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.748
+2025-06-20 22:28:26,308 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.805
+2025-06-20 22:28:26,310 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.949
+2025-06-20 22:28:26,788 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.725
+2025-06-20 22:28:27,273 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.982
+2025-06-20 22:28:27,275 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.893
+2025-06-20 22:28:28,616 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.961
+2025-06-20 22:28:29,058 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.671
+2025-06-20 22:28:30,013 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.801
+2025-06-20 22:28:31,970 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.926
+2025-06-20 22:28:32,421 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.890
+2025-06-20 22:28:32,888 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.955
+2025-06-20 22:28:32,892 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.827
+2025-06-20 22:28:33,344 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.808
+2025-06-20 22:28:35,212 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.939
+2025-06-20 22:28:35,659 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.869
+2025-06-20 22:28:36,116 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.957
+2025-06-20 22:28:37,583 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.921
+2025-06-20 22:28:38,052 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.802
+2025-06-20 22:28:38,525 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.794
+2025-06-20 22:28:38,997 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.895
+2025-06-20 22:28:39,460 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.951
+2025-06-20 22:28:39,463 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.969
+2025-06-20 22:28:39,904 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.911
+2025-06-20 22:28:40,361 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.964
+2025-06-20 22:28:41,722 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.980
+2025-06-20 22:28:41,726 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.954
+2025-06-20 22:28:42,630 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.949
+2025-06-20 22:28:42,634 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.964
+2025-06-20 22:28:42,636 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.801
+2025-06-20 22:28:43,088 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.745
+2025-06-20 22:28:43,090 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.734
+2025-06-20 22:28:43,528 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.696
+2025-06-20 22:28:44,911 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.968
+2025-06-20 22:28:44,913 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.943
+2025-06-20 22:28:45,324 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.784
+2025-06-20 22:28:45,326 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.865
+2025-06-20 22:28:46,304 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.964
+2025-06-20 22:28:47,242 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.781
+2025-06-20 22:28:47,683 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.685
+2025-06-20 22:28:47,684 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.855
+2025-06-20 22:28:48,109 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.680
+2025-06-20 22:28:48,618 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.878
+2025-06-20 22:28:49,972 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.867
+2025-06-20 22:28:49,975 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.957
+2025-06-20 22:28:49,978 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.798
+2025-06-20 22:28:50,908 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.703
+2025-06-20 22:28:50,909 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.729
+2025-06-20 22:28:51,377 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.696
+2025-06-20 22:28:51,860 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.833
+2025-06-20 22:28:52,367 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.743
+2025-06-20 22:28:52,793 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.925
+2025-06-20 22:28:52,797 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.962
+2025-06-20 22:28:53,248 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.958
+2025-06-20 22:28:53,251 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.927
+2025-06-20 22:28:53,254 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.741
+2025-06-20 22:28:53,767 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.720
+2025-06-20 22:28:53,770 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.720
+2025-06-20 22:28:54,203 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.829
+2025-06-20 22:28:54,655 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.963
+2025-06-20 22:28:55,136 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.801
+2025-06-20 22:28:55,584 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.736
+2025-06-20 22:28:56,490 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.954
+2025-06-20 22:28:56,493 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.879
+2025-06-20 22:28:56,496 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.907
+2025-06-20 22:28:56,950 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.970
+2025-06-20 22:28:57,936 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.931
+2025-06-20 22:28:58,378 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.748
+2025-06-20 22:28:58,822 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.937
+2025-06-20 22:28:59,264 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.928
+2025-06-20 22:28:59,737 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.975
+2025-06-20 22:28:59,740 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.938
+2025-06-20 22:29:00,201 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.908
+2025-06-20 22:29:00,203 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.973
+2025-06-20 22:29:01,104 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.948
+2025-06-20 22:29:01,107 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.989
+2025-06-20 22:29:01,535 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.977
+2025-06-20 22:29:01,538 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.943
+2025-06-20 22:29:02,491 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.762
+2025-06-20 22:29:02,495 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.953
+2025-06-20 22:29:03,844 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.831
+2025-06-20 22:29:03,847 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.956
+2025-06-20 22:29:03,850 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.791
+2025-06-20 22:29:05,615 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.913
+2025-06-20 22:29:06,089 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.913
+2025-06-20 22:29:07,048 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.924
+2025-06-20 22:29:07,051 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.929
+2025-06-20 22:29:07,928 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.981
+2025-06-20 22:29:07,932 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.937
+2025-06-20 22:29:08,364 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.933
+2025-06-20 22:29:08,369 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.980
+2025-06-20 22:29:08,373 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.949
+2025-06-20 22:29:09,253 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.985
+2025-06-20 22:29:09,257 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.956
+2025-06-20 22:29:09,675 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.950
+2025-06-20 22:29:09,678 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.753
+2025-06-20 22:29:10,131 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.817
+2025-06-20 22:29:11,548 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.932
+2025-06-20 22:29:11,979 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.938
+2025-06-20 22:29:12,438 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.964
+2025-06-20 22:29:12,442 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.911
+2025-06-20 22:29:12,869 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.877
+2025-06-20 22:29:12,872 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.978
+2025-06-20 22:29:12,875 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.949
+2025-06-20 22:29:14,305 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.953
+2025-06-20 22:29:14,761 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.944
+2025-06-20 22:29:14,765 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.985
+2025-06-20 22:29:15,697 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.894
+2025-06-20 22:29:15,702 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.949
+2025-06-20 22:29:15,706 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.953
+2025-06-20 22:29:15,710 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.916
+2025-06-20 22:29:16,177 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.922
+2025-06-20 22:29:17,091 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.962
+2025-06-20 22:29:18,495 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.951
+2025-06-20 22:29:18,928 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.856
+2025-06-20 22:29:18,933 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.941
+2025-06-20 22:29:19,815 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.886
+2025-06-20 22:29:19,819 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.920
+2025-06-20 22:29:19,822 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.955
+2025-06-20 22:29:20,281 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.927
+2025-06-20 22:29:20,737 - tracking.tracker - INFO - Re-identified player 12 with similarity 0.799
+2025-06-20 22:29:21,193 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.975
+2025-06-20 22:29:21,619 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.974
+2025-06-20 22:29:22,123 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.943
+2025-06-20 22:29:23,025 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.962
+2025-06-20 22:29:23,499 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.840
+2025-06-20 22:29:23,504 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.992
+2025-06-20 22:29:23,508 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.945
+2025-06-20 22:29:24,005 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.980
+2025-06-20 22:29:24,009 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.838
+2025-06-20 22:29:25,302 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.912
+2025-06-20 22:29:26,163 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.972
+2025-06-20 22:29:27,507 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.871
+2025-06-20 22:29:27,512 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.958
+2025-06-20 22:29:27,516 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.839
+2025-06-20 22:29:28,342 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.966
+2025-06-20 22:29:28,346 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.950
+2025-06-20 22:29:28,826 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.966
+2025-06-20 22:29:29,358 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.963
+2025-06-20 22:29:29,883 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.958
+2025-06-20 22:29:29,887 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.905
+2025-06-20 22:29:30,460 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.925
+2025-06-20 22:29:30,465 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.925
+2025-06-20 22:29:31,963 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.941
+2025-06-20 22:29:31,968 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.934
+2025-06-20 22:29:33,008 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.944
+2025-06-20 22:29:33,014 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.803
+2025-06-20 22:29:33,486 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.960
+2025-06-20 22:29:33,489 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.914
+2025-06-20 22:29:34,398 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.872
+2025-06-20 22:29:34,401 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.963
+2025-06-20 22:29:35,781 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.930
+2025-06-20 22:29:35,786 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.934
+2025-06-20 22:29:36,228 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.827
+2025-06-20 22:29:36,674 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.903
+2025-06-20 22:29:37,094 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.926
+2025-06-20 22:29:37,545 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.878
+2025-06-20 22:29:38,019 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.942
+2025-06-20 22:29:38,498 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.783
+2025-06-20 22:29:39,419 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.890
+2025-06-20 22:29:39,874 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.813
+2025-06-20 22:29:40,347 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.895
+2025-06-20 22:29:40,354 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.922
+2025-06-20 22:29:40,848 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.982
+2025-06-20 22:29:40,854 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.805
+2025-06-20 22:29:41,351 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.849
+2025-06-20 22:29:41,813 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.748
+2025-06-20 22:29:41,818 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.777
+2025-06-20 22:29:43,118 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.854
+2025-06-20 22:29:43,125 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.922
+2025-06-20 22:29:43,131 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.963
+2025-06-20 22:29:43,587 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.959
+2025-06-20 22:29:44,056 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.888
+2025-06-20 22:29:44,995 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.951
+2025-06-20 22:29:45,002 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.965
+2025-06-20 22:29:45,007 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.742
+2025-06-20 22:29:45,479 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.796
+2025-06-20 22:29:46,836 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.949
+2025-06-20 22:29:47,270 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.942
+2025-06-20 22:29:47,729 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.973
+2025-06-20 22:29:47,734 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.970
+2025-06-20 22:29:48,181 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.734
+2025-06-20 22:29:48,649 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.747
+2025-06-20 22:29:49,552 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.959
+2025-06-20 22:29:50,415 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.981
+2025-06-20 22:29:50,420 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.961
+2025-06-20 22:29:50,904 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.928
+2025-06-20 22:29:51,827 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.974
+2025-06-20 22:29:54,012 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.977
+2025-06-20 22:29:54,017 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.977
+2025-06-20 22:29:55,834 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.973
+2025-06-20 22:29:56,677 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.978
+2025-06-20 22:29:57,136 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.985
+2025-06-20 22:29:57,143 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.887
+2025-06-20 22:29:58,030 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.906
+2025-06-20 22:29:59,817 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.959
+2025-06-20 22:29:59,822 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.890
+2025-06-20 22:29:59,828 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.888
+2025-06-20 22:30:02,642 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.987
+2025-06-20 22:30:02,648 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.907
+2025-06-20 22:30:03,114 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.971
+2025-06-20 22:30:04,086 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.973
+2025-06-20 22:30:04,091 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.955
+2025-06-20 22:30:08,695 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.978
+2025-06-20 22:30:09,821 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.933
+2025-06-20 22:30:10,298 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.983
+2025-06-20 22:30:11,920 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.981
+2025-06-20 22:30:12,434 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.940
+2025-06-20 22:30:12,440 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.950
+2025-06-20 22:30:13,467 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.939
+2025-06-20 22:30:13,474 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.992
+2025-06-20 22:30:14,456 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.968
+2025-06-20 22:30:14,993 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.879
+2025-06-20 22:30:14,999 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.871
+2025-06-20 22:30:15,486 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.918
+2025-06-20 22:30:15,496 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.967
+2025-06-20 22:30:16,647 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.945
+2025-06-20 22:30:17,222 - tracking.tracker - INFO - Re-identified player 10 with similarity 0.966
+2025-06-20 22:30:17,230 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.976
+2025-06-20 22:30:17,819 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.871
+2025-06-20 22:30:18,374 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.987
+2025-06-20 22:30:19,461 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.925
+2025-06-20 22:30:19,997 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.935
+2025-06-20 22:30:20,546 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.914
+2025-06-20 22:30:20,551 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.944
+2025-06-20 22:30:21,048 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.886
+2025-06-20 22:30:22,111 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.900
+2025-06-20 22:30:22,116 - tracking.tracker - INFO - Re-identified player 7 with similarity 0.919
+2025-06-20 22:30:24,277 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.943
+2025-06-20 22:30:24,872 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.813
+2025-06-20 22:30:24,877 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.934
+2025-06-20 22:30:24,884 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.973
+2025-06-20 22:30:25,424 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.938
+2025-06-20 22:30:25,429 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.922
+2025-06-20 22:30:26,000 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.952
+2025-06-20 22:30:27,152 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.979
+2025-06-20 22:30:27,723 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.794
+2025-06-20 22:30:28,744 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.974
+2025-06-20 22:30:28,750 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.972
+2025-06-20 22:30:29,275 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.898
+2025-06-20 22:30:31,022 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.898
+2025-06-20 22:30:31,027 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.896
+2025-06-20 22:30:31,032 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.874
+2025-06-20 22:30:32,183 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.973
+2025-06-20 22:30:32,186 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.968
+2025-06-20 22:30:33,968 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.880
+2025-06-20 22:30:35,623 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.929
+2025-06-20 22:30:35,629 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.871
+2025-06-20 22:30:36,922 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.886
+2025-06-20 22:30:37,874 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.942
+2025-06-20 22:30:37,878 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.927
+2025-06-20 22:30:37,882 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.933
+2025-06-20 22:30:41,016 - tracking.tracker - INFO - Re-identified player 13 with similarity 0.924
+2025-06-20 22:30:42,202 - tracking.tracker - INFO - Re-identified player 0 with similarity 0.952
+2025-06-20 22:30:44,022 - tracking.tracker - INFO - Re-identified player 2 with similarity 0.965
+2025-06-20 22:30:44,027 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.864
+2025-06-20 22:30:44,700 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.831
+2025-06-20 22:30:45,955 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.893
+2025-06-20 22:30:47,182 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.876
+2025-06-20 22:30:48,395 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.946
+2025-06-20 22:30:49,642 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.952
+2025-06-20 22:30:50,306 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.947
+2025-06-20 22:30:50,979 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.893
+2025-06-20 22:30:53,404 - tracking.tracker - INFO - Re-identified player 6 with similarity 0.837
+2025-06-20 22:30:53,413 - tracking.tracker - INFO - Re-identified player 9 with similarity 0.948
+2025-06-20 22:30:54,077 - tracking.tracker - INFO - Re-identified player 3 with similarity 0.879
+2025-06-20 22:30:54,083 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.877
+2025-06-20 22:30:54,089 - tracking.tracker - INFO - Re-identified player 5 with similarity 0.887
+2025-06-20 22:30:54,096 - tracking.tracker - INFO - Re-identified player 4 with similarity 0.940
+2025-06-20 22:30:55,263 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.908
+2025-06-20 22:30:55,268 - tracking.tracker - INFO - Re-identified player 1 with similarity 0.868
+2025-06-20 22:30:57,004 - tracking.tracker - INFO - Re-identified player 14 with similarity 0.958
+2025-06-20 22:30:58,728 - tracking.tracker - INFO - Re-identified player 8 with similarity 0.836
+2025-06-20 22:30:59,883 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.932
+2025-06-20 22:31:00,465 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.978
+2025-06-20 22:31:01,618 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.975
+2025-06-20 22:31:03,442 - tracking.tracker - INFO - Re-identified player 15 with similarity 0.967
+2025-06-20 22:31:03,448 - tracking.tracker - INFO - Re-identified player 11 with similarity 0.884
+2025-06-20 22:31:05,778 - tracking.tracker - INFO - Created new player track 16
+2025-06-20 22:31:06,904 - __main__ - INFO - === Processing Complete ===
+2025-06-20 22:31:06,905 - __main__ - INFO - Detection Statistics:
+2025-06-20 22:31:06,905 - __main__ - INFO -   - Total frames processed: 375
+2025-06-20 22:31:06,905 - __main__ - INFO -   - Frames with detections: 372 (99.2%)
+2025-06-20 22:31:06,905 - __main__ - INFO -   - Total detections: 3764
+2025-06-20 22:31:06,905 - __main__ - INFO -   - Average detections per frame: 10.04
+2025-06-20 22:31:06,906 - __main__ - INFO - Enhanced Tracker Statistics:
+2025-06-20 22:31:06,906 - __main__ - INFO -   - Active players: 0
+2025-06-20 22:31:06,906 - __main__ - INFO -   - Disappeared players: 17
+2025-06-20 22:31:06,906 - __main__ - INFO -   - Total players ever tracked: 17
+2025-06-20 22:31:06,907 - __main__ - INFO -   - Re-identifications: 324
+2025-06-20 22:31:06,907 - __main__ - INFO -   - ID switches: 0
+2025-06-20 22:31:06,907 - __main__ - INFO -   - Player gallery size: 17
+2025-06-20 22:31:06,907 - __main__ - INFO - Analyzing player consistency...
+2025-06-20 22:31:06,913 - __main__ - INFO - Player Consistency Analysis:
+2025-06-20 22:31:06,913 - __main__ - INFO -   - Unique players tracked: 17
+2025-06-20 22:31:06,913 - __main__ - INFO -   - Analysis saved to: D:/Projects2.0/Listai/player-reid/player_consistency_analysis.json
+2025-06-20 22:31:06,914 - __main__ - INFO - Saving output video: D:/Projects2.0/Listai/player-reid/enhanced_output_tracked.mp4
+2025-06-20 22:31:13,045 - utils.video_io - INFO - Video saved with audio: D:/Projects2.0/Listai/player-reid/enhanced_output_tracked.mp4
+2025-06-20 22:31:13,046 - utils.video_io - INFO - Video saved: D:/Projects2.0/Listai/player-reid/enhanced_output_tracked.mp4 (375 frames, 25 FPS)
+2025-06-20 22:31:13,047 - __main__ - INFO - === Enhanced Player Re-identification Completed Successfully! ===
