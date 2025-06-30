@@ -6,23 +6,24 @@ from pathlib import Path
 from tqdm import tqdm
 import json
 
-# Fix for PyTorch 2.6 compatibility - disable weights_only restriction
 os.environ['TORCH_WEIGHTS_ONLY'] = 'False'
-
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-# Import the enhanced tracker
 from tracking.tracker import EnhancedPlayerTracker
 from utils.video_io import VideoProcessor
 from utils.draw import ResultVisualizer
+from visual_memory import VisualMemorySystem
 
 def setup_logging(log_level=logging.INFO):
     """Setup comprehensive logging"""
+    # Ensure logs directory exists
+    os.makedirs('logs', exist_ok=True)
+    
     logging.basicConfig(
         level=log_level,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler('enhanced_player_reid.log'),
+            logging.FileHandler('logs/enhanced_player_reid.log'),
             logging.StreamHandler(sys.stdout)
         ]
     )
@@ -85,6 +86,11 @@ def analyze_player_consistency(tracking_results, output_path=None):
         }
     
     if output_path:
+        # Ensure outputs directory exists
+        output_dir = os.path.dirname(output_path)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
+        
         with open(output_path, 'w') as f:
             json.dump(analysis, f, indent=2)
     
@@ -93,10 +99,10 @@ def analyze_player_consistency(tracking_results, output_path=None):
 def main():
     parser = argparse.ArgumentParser(description='Enhanced Player Re-identification System')
     parser.add_argument('--input', type=str, 
-                       default='D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4', 
+                       default='D:/Projects2.0/Listai/Assignment Materials/15sec_input_720p.mp4',
                        help='Input video path')
     parser.add_argument('--output', type=str, 
-                       default='D:/Projects2.0/Listai/player-reid/enhanced_output_tracked.mp4', 
+                       default='outputs/enhanced_output_tracked.mp4', 
                        help='Output video path')
     parser.add_argument('--model', type=str, 
                        default='D:/Projects2.0/Listai/models/best.pt', 
@@ -109,16 +115,22 @@ def main():
                        help='Maximum distance for matching (default: 200.0)')
     parser.add_argument('--reid-threshold', type=float, default=0.65,
                        help='Re-identification similarity threshold (default: 0.65)')
+    parser.add_argument('--max-players', type=int, default=22,
+                       help='Maximum number of players to track (default: 22)')
     parser.add_argument('--show-debug', action='store_true',
                        help='Show debug information on frames')
     parser.add_argument('--analysis-output', type=str, 
-                       default='D:/Projects2.0/Listai/player-reid/player_consistency_analysis.json',
+                       default='outputs/player_consistency_analysis.json',
                        help='Output path for player consistency analysis')
     parser.add_argument('--log-level', type=str, default='INFO',
                        choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                        help='Logging level (default: INFO)')
     
     args = parser.parse_args()
+    
+    # Get the script directory and change to it
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(script_dir)
     
     # Setup logging with specified level
     log_level = getattr(logging, args.log_level.upper())
@@ -144,15 +156,19 @@ def main():
         logger.info(f"  - Max distance: {args.max_distance}")
         logger.info(f"  - Re-ID threshold: {args.reid_threshold}")
         
-        # Initialize enhanced tracker with all parameters
+        # Initialize enhanced tracker and visual memory system
         logger.info("Initializing enhanced player tracker...")
+        visual_memory = VisualMemorySystem()
         tracker = EnhancedPlayerTracker(
             model_path=args.model,
             conf_threshold=args.conf,
             max_disappeared=args.max_disappeared,
             max_distance=args.max_distance,
-            reid_threshold=args.reid_threshold
+            reid_threshold=args.reid_threshold,
+            max_players=args.max_players,
+            visual_memory=visual_memory  # Pass visual memory to tracker
         )
+        logger.info("Initializing visual memory system (EVA-02)...")
         
         logger.info("Initializing video processor...")
         video_processor = VideoProcessor(args.input)
@@ -172,7 +188,7 @@ def main():
         total_detections = 0
         frames_with_detections = 0
         
-        # Process frames with enhanced tracking
+        # Process frames with enhanced tracking and visual memory
         for frame_idx, frame in enumerate(tqdm(frames, desc="Processing frames")):
             tracked_players = tracker.track_frame(frame)
             tracking_results.append(tracked_players)
@@ -210,10 +226,18 @@ def main():
         logger.info(f"Enhanced Tracker Statistics:")
         logger.info(f"  - Active players: {tracker_stats['active_players']}")
         logger.info(f"  - Disappeared players: {tracker_stats['disappeared_players']}")
-        logger.info(f"  - Total players ever tracked: {tracker_stats['total_players_ever']}")
+        logger.info(f"  - Total players registered: {tracker_stats['total_players_registered']}")
+        logger.info(f"  - Used IDs: {tracker_stats['used_ids']}")
+        logger.info(f"  - Max players: {tracker_stats['max_players']}")
         logger.info(f"  - Re-identifications: {tracker_stats['reidentifications']}")
         logger.info(f"  - ID switches: {tracker_stats['id_switches']}")
         logger.info(f"  - Player gallery size: {tracker_stats['player_gallery_size']}")
+        
+        # Visual memory statistics
+        vm_stats = visual_memory.get_memory_statistics()
+        logger.info(f"Visual Memory Statistics:")
+        for k, v in vm_stats.items():
+            logger.info(f"  - {k}: {v}")
         
         # Perform player consistency analysis
         logger.info("Analyzing player consistency...")
@@ -225,6 +249,10 @@ def main():
         
         # Save output video
         logger.info(f"Saving output video: {args.output}")
+        # Ensure output directory exists
+        output_dir = os.path.dirname(args.output)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
         video_processor.save_video(output_frames, args.output, fps)
         
         logger.info("=== Enhanced Player Re-identification Completed Successfully! ===")

@@ -8,6 +8,7 @@ from collections import defaultdict, deque
 import torch
 import sys
 import os
+import importlib
 
 # Add the parent directory to the path for absolute imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -47,9 +48,11 @@ def patch_ultralytics_torch_load():
 
 class EnhancedPlayerTracker:
     def __init__(self, model_path: str, conf_threshold: float = 0.35,
-                 max_disappeared: int = 60,  # Increased for better re-identification
+                 max_disappeared: int = 120,  # Increased for better re-identification
                  max_distance: float = 200.0,
-                 reid_threshold: float = 0.65):  # Threshold for re-identification
+                 reid_threshold: float = 0.6,  # Lowered for better re-identification
+                 visual_memory=None,
+                 max_players: int = 22):  # Maximum players on field
         
         patch_ultralytics_torch_load()
         
@@ -58,15 +61,22 @@ class EnhancedPlayerTracker:
         self.max_disappeared = max_disappeared
         self.max_distance = max_distance
         self.reid_threshold = reid_threshold
+        self.visual_memory = visual_memory
+        self.max_players = max_players
         
-        # Core tracking state
+        # Core tracking state with improved ID management
         self.next_id = 0
         self.active_players = {}  # Currently visible players
         self.disappeared_players = {}  # Players that disappeared with countdown
         self.player_gallery = {}  # Long-term storage of player features and data
         
+        # Global player registry for consistent IDs
+        self.player_registry = {}  # Maps player signatures to IDs
+        self.available_ids = set(range(max_players))  # Available IDs (0-21)
+        self.used_ids = set()  # Currently used IDs
+        
         # Enhanced feature management
-        self.feature_buffers = defaultdict(lambda: deque(maxlen=50))  # Larger buffer
+        self.feature_buffers = defaultdict(lambda: deque(maxlen=50))
         self.position_buffers = defaultdict(lambda: deque(maxlen=30))
         self.confidence_buffers = defaultdict(lambda: deque(maxlen=20))
         self.bbox_buffers = defaultdict(lambda: deque(maxlen=10))
@@ -75,8 +85,8 @@ class EnhancedPlayerTracker:
         self.motion_models = {}
         
         # Stability tracking
-        self.id_stability = defaultdict(int)  # How long each ID has been stable
-        self.last_assignment = {}  # Last detection-to-ID assignment
+        self.id_stability = defaultdict(int)
+        self.last_assignment = {}
         
         # Statistics
         self.frame_count = 0
@@ -84,7 +94,71 @@ class EnhancedPlayerTracker:
         self.total_reidentifications = 0
         self.id_switches = 0
         
-        logger.info(f"EnhancedPlayerTracker initialized with model: {model_path}")
+        # Pose extraction
+        self.pose_extractor = None
+        try:
+            pose_module = importlib.import_module('utils.pose')
+            self.pose_extractor = pose_module.PoseExtractor()
+        except Exception as e:
+            logger.warning(f"Pose extractor not available: {e}")
+        self.keypoint_buffers = defaultdict(lambda: deque(maxlen=10))
+        
+        logger.info(f"EnhancedPlayerTracker initialized with model: {model_path}, max_players: {max_players}")
+    
+    def _generate_player_signature(self, features: np.ndarray, keypoints=None) -> str:
+        """Generate a unique signature for a player based on features and pose"""
+        # Use first 50 dimensions of features for signature (most discriminative)
+        feature_sig = features[:50].tobytes().hex()[:32]
+        
+        if keypoints is not None:
+            # Add pose information to signature
+            pose_sig = keypoints.flatten()[:20].tobytes().hex()[:16]
+            return f"{feature_sig}_{pose_sig}"
+        
+        return feature_sig
+    
+    def _get_or_create_player_id(self, detection: Dict) -> int:
+        """Get existing player ID or create new one, ensuring max 22 players"""
+        signature = self._generate_player_signature(
+            detection['features'], 
+            detection.get('keypoints', None)
+        )
+        
+        # Check if we've seen this player before
+        if signature in self.player_registry:
+            player_id = self.player_registry[signature]
+            if player_id in self.used_ids:
+                return player_id
+            else:
+                # Reuse the ID
+                self.used_ids.add(player_id)
+                return player_id
+        
+        # Check if we have available IDs
+        if len(self.used_ids) >= self.max_players:
+            # Find the least recently used ID
+            oldest_id = min(self.used_ids, key=lambda x: self.player_gallery.get(x, {}).get('last_seen', 0))
+            logger.warning(f"Max players reached ({self.max_players}), reusing ID {oldest_id}")
+            self.used_ids.remove(oldest_id)
+            # Clean up old player data
+            if oldest_id in self.player_gallery:
+                del self.player_gallery[oldest_id]
+            if oldest_id in self.active_players:
+                del self.active_players[oldest_id]
+            if oldest_id in self.disappeared_players:
+                del self.disappeared_players[oldest_id]
+            
+            # Register new player with old ID
+            self.player_registry[signature] = oldest_id
+            self.used_ids.add(oldest_id)
+            return oldest_id
+        
+        # Create new ID
+        new_id = len(self.used_ids)
+        self.player_registry[signature] = new_id
+        self.used_ids.add(new_id)
+        logger.info(f"Created new player ID: {new_id}")
+        return new_id
     
     def _extract_enhanced_features(self, frame: np.ndarray, bbox: Tuple[int, int, int, int]) -> np.ndarray:
         """Extract comprehensive appearance features for robust matching"""
@@ -228,32 +302,59 @@ class EnhancedPlayerTracker:
         
         return np.average(valid_features, axis=0, weights=weights)
     
+    def _extract_pose_keypoints(self, frame: np.ndarray, bbox: Tuple[int, int, int, int]):
+        if self.pose_extractor is None:
+            return None
+        x1, y1, x2, y2 = bbox
+        x1, y1, x2, y2 = max(0, x1), max(0, y1), min(frame.shape[1], x2), min(frame.shape[0], y2)
+        if x2 <= x1 or y2 <= y1:
+            return None
+        crop = frame[y1:y2, x1:x2]
+        if crop.size == 0:
+            return None
+        crop_rgb = cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
+        keypoints = self.pose_extractor.extract_keypoints(crop_rgb)
+        return keypoints
+    
+    def _get_average_keypoints(self, player_id: int):
+        if player_id not in self.keypoint_buffers or len(self.keypoint_buffers[player_id]) == 0:
+            return None
+        keypoints = np.array([k for k in self.keypoint_buffers[player_id] if k is not None])
+        if len(keypoints) == 0:
+            return None
+        return np.median(keypoints, axis=0)
+    
+    def _keypoint_similarity(self, k1, k2):
+        if k1 is None or k2 is None or k1.shape != k2.shape:
+            return 0.0
+        vis1 = k1[:,2] > 0.5
+        vis2 = k2[:,2] > 0.5
+        vis = vis1 & vis2
+        if np.sum(vis) == 0:
+            return 0.0
+        d = np.linalg.norm(k1[vis,:2] - k2[vis,:2], axis=1)
+        sim = np.exp(-np.mean(d) * 10)
+        return float(sim)
+    
     def _calculate_similarity_score(self, features1: np.ndarray, features2: np.ndarray,
                                    pos1: Tuple[float, float], pos2: Tuple[float, float],
-                                   predicted_pos: Optional[Tuple[float, float]] = None) -> float:
-        """Calculate comprehensive similarity score"""
-        
-        # 1. Appearance similarity (cosine similarity)
+                                   predicted_pos: Optional[Tuple[float, float]] = None,
+                                   keypoints1=None, keypoints2=None) -> float:
         appearance_sim = np.dot(features1, features2) / (
             np.linalg.norm(features1) * np.linalg.norm(features2) + 1e-7
         )
-        
-        # 2. Position similarity
         position_dist = np.linalg.norm(np.array(pos1) - np.array(pos2))
         position_sim = np.exp(-position_dist / self.max_distance)
-        
-        # 3. Motion consistency (if predicted position available)
         motion_sim = 1.0
         if predicted_pos is not None:
             motion_dist = np.linalg.norm(np.array(pos2) - np.array(predicted_pos))
             motion_sim = np.exp(-motion_dist / (self.max_distance * 0.5))
-        
-        # Weighted combination
-        weights = [0.6, 0.25, 0.15]  # Appearance, position, motion
-        combined_score = (weights[0] * appearance_sim + 
-                         weights[1] * position_sim + 
-                         weights[2] * motion_sim)
-        
+        pose_sim = self._keypoint_similarity(keypoints1, keypoints2) if (keypoints1 is not None and keypoints2 is not None) else 0.0
+        weights = [0.5, 0.2, 0.1, 0.2]  # appearance, position, motion, pose
+        combined_score = (weights[0] * appearance_sim +
+                         weights[1] * position_sim +
+                         weights[2] * motion_sim +
+                         weights[3] * pose_sim)
         return combined_score
     
     def _detect_players(self, frame: np.ndarray) -> List[Dict]:
@@ -320,11 +421,13 @@ class EnhancedPlayerTracker:
                     # Create final detection objects
                     for det in final_detections:
                         bbox = det['bbox']
+                        keypoints = self._extract_pose_keypoints(frame, bbox)
                         detection = {
                             'bbox': bbox,
                             'confidence': det['confidence'],
                             'centroid': self._get_centroid(bbox),
-                            'features': self._extract_enhanced_features(frame, bbox)
+                            'features': self._extract_enhanced_features(frame, bbox),
+                            'keypoints': keypoints
                         }
                         detections.append(detection)
         
@@ -360,7 +463,7 @@ class EnhancedPlayerTracker:
         return intersection / union if union > 0 else 0.0
     
     def _match_detections_to_tracks(self, detections: List[Dict]) -> Tuple[List[Tuple[int, int]], List[int], List[int]]:
-        """Enhanced detection-to-track association with multiple stages"""
+        """Enhanced detection-to-track association with improved ID stability"""
         
         if len(self.active_players) == 0:
             return [], [], list(range(len(detections)))
@@ -368,42 +471,55 @@ class EnhancedPlayerTracker:
         if len(detections) == 0:
             return [], list(self.active_players.keys()), []
         
-        # Stage 1: Match with active players
+        # Stage 1: Match with active players using stricter criteria
         player_ids = list(self.active_players.keys())
         cost_matrix = np.full((len(player_ids), len(detections)), 1.0)
         
         for i, player_id in enumerate(player_ids):
             player_data = self.active_players[player_id]
             player_features = self._get_average_features(player_id)
+            player_keypoints = self._get_average_keypoints(player_id)
             
             if player_features is None:
                 continue
             
-            # Get predicted position
             predicted_pos = self._predict_position(player_id)
             if predicted_pos == (0, 0):
                 predicted_pos = player_data['centroid']
             
             for j, detection in enumerate(detections):
-                # Calculate comprehensive similarity
-                similarity = self._calculate_similarity_score(
-                    player_features, detection['features'],
-                    player_data['centroid'], detection['centroid'],
-                    predicted_pos
+                # Calculate multiple similarity metrics
+                appearance_sim = np.dot(player_features, detection['features']) / (
+                    np.linalg.norm(player_features) * np.linalg.norm(detection['features']) + 1e-7
                 )
                 
-                # Convert similarity to cost (lower is better)
-                cost_matrix[i, j] = 1.0 - similarity
+                position_dist = np.linalg.norm(np.array(player_data['centroid']) - np.array(detection['centroid']))
+                position_sim = np.exp(-position_dist / self.max_distance)
+                
+                pose_sim = self._keypoint_similarity(player_keypoints, detection.get('keypoints', None))
+                
+                # Combined similarity with higher weight on appearance and position
+                combined_sim = 0.6 * appearance_sim + 0.3 * position_sim + 0.1 * pose_sim
+                
+                # Apply temporal consistency penalty
+                if player_id in self.last_assignment:
+                    last_bbox = self.last_assignment[player_id]
+                    current_bbox = detection['bbox']
+                    bbox_overlap = self._calculate_iou(last_bbox, current_bbox)
+                    if bbox_overlap > 0.1:  # If there's significant overlap, boost similarity
+                        combined_sim = min(1.0, combined_sim + 0.2)
+                
+                cost_matrix[i, j] = 1.0 - combined_sim
         
-        # Solve assignment problem
+        # Solve assignment problem with higher threshold
         matches = []
         if cost_matrix.shape[0] > 0 and cost_matrix.shape[1] > 0:
             row_indices, col_indices = linear_sum_assignment(cost_matrix)
             
             for row, col in zip(row_indices, col_indices):
                 similarity = 1.0 - cost_matrix[row, col]
-                # Stricter threshold for matching
-                if similarity >= 0.7:  # Higher threshold
+                # Much higher threshold for active players to prevent ID switches
+                if similarity >= 0.85:  # Increased from 0.75
                     matches.append((player_ids[row], col))
         
         matched_player_ids = [match[0] for match in matches]
@@ -411,7 +527,7 @@ class EnhancedPlayerTracker:
         unmatched_players = [pid for pid in player_ids if pid not in matched_player_ids]
         unmatched_detections = [i for i in range(len(detections)) if i not in matched_detection_indices]
         
-        # Stage 2: Try to match unmatched detections with disappeared players
+        # Stage 2: Enhanced re-identification with stability checks
         additional_matches = []
         remaining_unmatched = []
         
@@ -420,19 +536,44 @@ class EnhancedPlayerTracker:
             best_match_id = None
             best_similarity = 0.0
             
-            # Check disappeared players
-            for player_id in self.disappeared_players.keys():
+            # Check all disappeared players with stability checks
+            for player_id in list(self.disappeared_players.keys()):
                 if player_id in self.player_gallery:
                     gallery_features = self._get_average_features(player_id)
+                    gallery_keypoints = self._get_average_keypoints(player_id)
+                    
                     if gallery_features is not None:
-                        similarity = self._calculate_similarity_score(
-                            gallery_features, detection['features'],
-                            self.player_gallery[player_id]['last_centroid'],
-                            detection['centroid']
+                        # Calculate multiple similarity scores
+                        appearance_sim = np.dot(gallery_features, detection['features']) / (
+                            np.linalg.norm(gallery_features) * np.linalg.norm(detection['features']) + 1e-7
                         )
                         
-                        if similarity > best_similarity and similarity >= self.reid_threshold:
-                            best_similarity = similarity
+                        position_dist = np.linalg.norm(np.array(self.player_gallery[player_id]['last_centroid']) - np.array(detection['centroid']))
+                        position_sim = np.exp(-position_dist / self.max_distance)
+                        
+                        pose_sim = self._keypoint_similarity(gallery_keypoints, detection.get('keypoints', None))
+                        
+                        # Combined similarity with higher weight on appearance
+                        combined_sim = 0.7 * appearance_sim + 0.2 * position_sim + 0.1 * pose_sim
+                        
+                        # Use different thresholds based on time since disappearance
+                        frames_since_disappeared = self.frame_count - self.disappeared_players[player_id].get('last_seen_frame', 0)
+                        
+                        if frames_since_disappeared < 15:
+                            threshold = self.reid_threshold - 0.15  # Much easier for recently disappeared
+                        elif frames_since_disappeared < 30:
+                            threshold = self.reid_threshold - 0.1
+                        elif frames_since_disappeared < 60:
+                            threshold = self.reid_threshold
+                        else:
+                            threshold = self.reid_threshold + 0.1
+                        
+                        # Additional stability check: check if this ID was recently used
+                        if player_id in self.id_stability and self.id_stability[player_id] > 10:
+                            threshold -= 0.05  # Easier to re-identify stable IDs
+                        
+                        if combined_sim > best_similarity and combined_sim >= threshold:
+                            best_similarity = combined_sim
                             best_match_id = player_id
             
             if best_match_id is not None:
@@ -445,7 +586,7 @@ class EnhancedPlayerTracker:
         return matches + additional_matches, unmatched_players, remaining_unmatched
     
     def _update_player_data(self, player_id: int, detection: Dict):
-        """Update all player data structures"""
+        """Update all player data structures with temporal consistency"""
         # Update active player data
         self.active_players[player_id] = {
             'bbox': detection['bbox'],
@@ -459,6 +600,8 @@ class EnhancedPlayerTracker:
         self.position_buffers[player_id].append(detection['centroid'])
         self.confidence_buffers[player_id].append(detection['confidence'])
         self.bbox_buffers[player_id].append(detection['bbox'])
+        if 'keypoints' in detection and detection['keypoints'] is not None:
+            self.keypoint_buffers[player_id].append(detection['keypoints'])
         
         # Update motion model
         self._update_motion_model(player_id, detection['centroid'])
@@ -475,78 +618,87 @@ class EnhancedPlayerTracker:
         # Update stability tracking
         self.id_stability[player_id] += 1
         
+        # Track last assignment for temporal consistency
+        self.last_assignment[player_id] = detection['bbox']
+        
         # Remove from disappeared if it was there
         if player_id in self.disappeared_players:
             del self.disappeared_players[player_id]
     
     def track_frame(self, frame: np.ndarray) -> List[Dict]:
-        """Main tracking function with enhanced consistency"""
+        """Main tracking function with a corrected workflow for robust re-identification."""
         self.frame_count += 1
         detections = self._detect_players(frame)
-        
-        # Handle case with no detections
-        if len(detections) == 0:
-            # Move active players to disappeared
-            for player_id in list(self.active_players.keys()):
-                if player_id not in self.disappeared_players:
-                    self.disappeared_players[player_id] = 1
-                else:
-                    self.disappeared_players[player_id] += 1
+        self.total_detections += len(detections)
+
+        # Matching and state update
+        matches, unmatched_players, unmatched_detections_indices = self._match_detections_to_tracks(detections)
+
+        # Update matched players
+        for player_id, detection_idx in matches:
+            self._update_player_data(player_id, detections[detection_idx])
+
+        # Handle players that have disappeared
+        for player_id in unmatched_players:
+            self.disappeared_players[player_id] = self.active_players.pop(player_id)
+            self.disappeared_players[player_id]['last_seen_frame'] = self.frame_count
+
+        # --- Re-identification Step ---
+        # Attempt to re-identify unmatched detections using visual memory
+        still_unmatched_indices = []
+        if self.visual_memory:
+            reidentified_detections = set()
+            disappeared_ids = list(self.disappeared_players.keys())
+
+            for detection_idx in unmatched_detections_indices:
+                detection = detections[detection_idx]
                 
-                # Remove from active
-                del self.active_players[player_id]
+                # Use visual memory to recognize from the disappeared pool
+                recognized_id, reid_score = self.visual_memory.recognize_player(
+                    frame, detection['bbox'], self.reid_threshold
+                )
+
+                if recognized_id is not None and recognized_id in disappeared_ids:
+                    logger.info(f"Re-identified player {recognized_id} for detection {detection_idx} with score {reid_score:.2f}")
+                    # This detection is now matched to a re-identified player
+                    self._update_player_data(recognized_id, detection)
+                    reidentified_detections.add(detection_idx)
+                    self.total_reidentifications += 1
+                else:
+                    still_unmatched_indices.append(detection_idx)
             
-            # Clean up disappeared players that have been gone too long
-            for player_id in list(self.disappeared_players.keys()):
-                if self.disappeared_players[player_id] > self.max_disappeared:
-                    del self.disappeared_players[player_id]
-                    logger.info(f"Player {player_id} permanently lost after {self.max_disappeared} frames")
-            
-            return []
-        
-        # Initialize tracking if no active players
-        if len(self.active_players) == 0 and len(self.disappeared_players) == 0:
-            # First frame or restart - assign new IDs to all detections
-            for detection in detections:
-                self._update_player_data(self.next_id, detection)
-                logger.info(f"Initialized new player {self.next_id}")
-                self.next_id += 1
+            unmatched_detections_indices = still_unmatched_indices
         else:
-            # Perform matching
-            matches, unmatched_players, unmatched_detections = self._match_detections_to_tracks(detections)
-            
-            # Update matched players
-            for player_id, detection_idx in matches:
-                detection = detections[detection_idx]
-                self._update_player_data(player_id, detection)
-            
-            # Handle unmatched players (move to disappeared)
-            for player_id in unmatched_players:
-                if player_id not in self.disappeared_players:
-                    self.disappeared_players[player_id] = 1
-                else:
-                    self.disappeared_players[player_id] += 1
-                
-                # Remove from active
-                if player_id in self.active_players:
-                    del self.active_players[player_id]
-            
-            # Create new tracks for unmatched detections
-            for detection_idx in unmatched_detections:
-                detection = detections[detection_idx]
-                self._update_player_data(self.next_id, detection)
-                logger.info(f"Created new player track {self.next_id}")
-                self.next_id += 1
-            
-            # Clean up disappeared players
-            for player_id in list(self.disappeared_players.keys()):
-                if self.disappeared_players[player_id] > self.max_disappeared:
-                    del self.disappeared_players[player_id]
-                    logger.info(f"Player {player_id} permanently lost")
+            # If no visual memory, all unmatched are new
+            still_unmatched_indices = unmatched_detections_indices
+
+
+        # Register new players for any remaining unmatched detections
+        for detection_idx in still_unmatched_indices:
+            detection = detections[detection_idx]
+            new_id = self._get_or_create_player_id(detection)
+            self._update_player_data(new_id, detection)
+            logger.info(f"Initialized new player {new_id}")
+
+        # Clean up players that have been disappeared for too long
+        for player_id in list(self.disappeared_players.keys()):
+            if self.frame_count - self.disappeared_players[player_id]['last_seen_frame'] > self.max_disappeared:
+                logger.info(f"Player {player_id} permanently lost after {self.max_disappeared} frames")
+                # Also remove from gallery to prevent incorrect re-identification later
+                if player_id in self.player_gallery:
+                    del self.player_gallery[player_id]
+                if self.visual_memory and player_id in self.visual_memory.player_memories:
+                    del self.visual_memory.player_memories[player_id]
+                del self.disappeared_players[player_id]
         
-        # Prepare results
+        # --- Finalization Step ---
+        # Store visual memories and prepare results for all currently active players
         results = []
         for player_id, player_data in self.active_players.items():
+            # Store memory for the current state
+            if self.visual_memory:
+                self.visual_memory.store_player_memory(player_id, frame, player_data['bbox'])
+
             results.append({
                 'id': player_id,
                 'bbox': player_data['bbox'],
@@ -554,7 +706,7 @@ class EnhancedPlayerTracker:
                 'confidence': player_data['confidence'],
                 'stability': self.id_stability[player_id]
             })
-        
+
         return results
     
     def get_statistics(self) -> Dict:
@@ -564,7 +716,9 @@ class EnhancedPlayerTracker:
             'total_detections': self.total_detections,
             'active_players': len(self.active_players),
             'disappeared_players': len(self.disappeared_players),
-            'total_players_ever': self.next_id,
+            'total_players_registered': len(self.player_registry),
+            'used_ids': len(self.used_ids),
+            'max_players': self.max_players,
             'reidentifications': self.total_reidentifications,
             'id_switches': self.id_switches,
             'avg_detections_per_frame': self.total_detections / max(1, self.frame_count),

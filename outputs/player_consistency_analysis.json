@@ -1,0 +1,176 @@
+{
+  "total_frames": 375,
+  "unique_players": 17,
+  "player_stats": {
+    "0": {
+      "duration": 202,
+      "presence_frames": 180,
+      "presence_ratio": 0.8910891089108911,
+      "gaps_count": 12,
+      "average_gap": 1.8333333333333333,
+      "longest_streak": 61,
+      "first_appearance": 1,
+      "last_appearance": 202
+    },
+    "1": {
+      "duration": 371,
+      "presence_frames": 304,
+      "presence_ratio": 0.8194070080862533,
+      "gaps_count": 25,
+      "average_gap": 2.68,
+      "longest_streak": 78,
+      "first_appearance": 1,
+      "last_appearance": 371
+    },
+    "2": {
+      "duration": 213,
+      "presence_frames": 158,
+      "presence_ratio": 0.7417840375586855,
+      "gaps_count": 19,
+      "average_gap": 2.8947368421052633,
+      "longest_streak": 90,
+      "first_appearance": 1,
+      "last_appearance": 213
+    },
+    "3": {
+      "duration": 361,
+      "presence_frames": 231,
+      "presence_ratio": 0.6398891966759003,
+      "gaps_count": 24,
+      "average_gap": 5.416666666666667,
+      "longest_streak": 83,
+      "first_appearance": 1,
+      "last_appearance": 361
+    },
+    "4": {
+      "duration": 373,
+      "presence_frames": 272,
+      "presence_ratio": 0.7292225201072386,
+      "gaps_count": 26,
+      "average_gap": 3.8846153846153846,
+      "longest_streak": 75,
+      "first_appearance": 1,
+      "last_appearance": 373
+    },
+    "5": {
+      "duration": 371,
+      "presence_frames": 277,
+      "presence_ratio": 0.7466307277628033,
+      "gaps_count": 21,
+      "average_gap": 4.476190476190476,
+      "longest_streak": 79,
+      "first_appearance": 1,
+      "last_appearance": 371
+    },
+    "6": {
+      "duration": 341,
+      "presence_frames": 260,
+      "presence_ratio": 0.7624633431085044,
+      "gaps_count": 36,
+      "average_gap": 2.25,
+      "longest_streak": 30,
+      "first_appearance": 1,
+      "last_appearance": 341
+    },
+    "7": {
+      "duration": 363,
+      "presence_frames": 235,
+      "presence_ratio": 0.6473829201101928,
+      "gaps_count": 15,
+      "average_gap": 8.533333333333333,
+      "longest_streak": 62,
+      "first_appearance": 1,
+      "last_appearance": 363
+    },
+    "8": {
+      "duration": 220,
+      "presence_frames": 191,
+      "presence_ratio": 0.8681818181818182,
+      "gaps_count": 14,
+      "average_gap": 2.0714285714285716,
+      "longest_streak": 37,
+      "first_appearance": 1,
+      "last_appearance": 220
+    },
+    "9": {
+      "duration": 371,
+      "presence_frames": 274,
+      "presence_ratio": 0.738544474393531,
+      "gaps_count": 29,
+      "average_gap": 3.3448275862068964,
+      "longest_streak": 76,
+      "first_appearance": 1,
+      "last_appearance": 371
+    },
+    "10": {
+      "duration": 118,
+      "presence_frames": 101,
+      "presence_ratio": 0.8559322033898306,
+      "gaps_count": 5,
+      "average_gap": 3.4,
+      "longest_streak": 88,
+      "first_appearance": 1,
+      "last_appearance": 118
+    },
+    "11": {
+      "duration": 370,
+      "presence_frames": 304,
+      "presence_ratio": 0.8216216216216217,
+      "gaps_count": 22,
+      "average_gap": 3.0,
+      "longest_streak": 81,
+      "first_appearance": 2,
+      "last_appearance": 371
+    },
+    "12": {
+      "duration": 214,
+      "presence_frames": 167,
+      "presence_ratio": 0.780373831775701,
+      "gaps_count": 21,
+      "average_gap": 2.238095238095238,
+      "longest_streak": 36,
+      "first_appearance": 3,
+      "last_appearance": 216
+    },
+    "13": {
+      "duration": 362,
+      "presence_frames": 265,
+      "presence_ratio": 0.7320441988950276,
+      "gaps_count": 23,
+      "average_gap": 4.217391304347826,
+      "longest_streak": 55,
+      "first_appearance": 10,
+      "last_appearance": 371
+    },
+    "14": {
+      "duration": 331,
+      "presence_frames": 238,
+      "presence_ratio": 0.7190332326283988,
+      "gaps_count": 26,
+      "average_gap": 3.576923076923077,
+      "longest_streak": 42,
+      "first_appearance": 39,
+      "last_appearance": 369
+    },
+    "15": {
+      "duration": 270,
+      "presence_frames": 205,
+      "presence_ratio": 0.7592592592592593,
+      "gaps_count": 25,
+      "average_gap": 2.6,
+      "longest_streak": 39,
+      "first_appearance": 102,
+      "last_appearance": 371
+    },
+    "16": {
+      "duration": 55,
+      "presence_frames": 55,
+      "presence_ratio": 1.0,
+      "gaps_count": 0,
+      "average_gap": 0,
+      "longest_streak": 55,
+      "first_appearance": 317,
+      "last_appearance": 371
+    }
+  }
+}

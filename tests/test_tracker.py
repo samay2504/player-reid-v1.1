@@ -10,6 +10,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from tracking.tracker import EnhancedPlayerTracker
 from utils.video_io import VideoProcessor
 from utils.draw import ResultVisualizer
+from visual_memory import VisualMemorySystem
 
 class TestEnhancedPlayerTracker(unittest.TestCase):
     
@@ -27,6 +28,17 @@ class TestEnhancedPlayerTracker(unittest.TestCase):
         self.assertEqual(len(tracker.active_players), 0)
         self.assertEqual(len(tracker.disappeared_players), 0)
         mock_safe_load.assert_called_once_with(self.mock_model_path)
+    
+    @patch('tracking.tracker.safe_yolo_load')
+    def test_tracker_with_visual_memory(self, mock_safe_load):
+        mock_model = Mock()
+        mock_safe_load.return_value = mock_model
+        
+        # Test tracker initialization with visual memory
+        visual_memory = Mock()
+        tracker = EnhancedPlayerTracker(self.mock_model_path, visual_memory=visual_memory)
+        
+        self.assertEqual(tracker.visual_memory, visual_memory)
     
     @patch('tracking.tracker.safe_yolo_load')
     def test_enhanced_feature_extraction(self, mock_safe_load):
@@ -202,13 +214,118 @@ class TestEnhancedPlayerTracker(unittest.TestCase):
         stats = tracker.get_statistics()
         
         expected_keys = [
-            'total_frames', 'total_detections', 'active_players',
-            'disappeared_players', 'total_players_ever', 'reidentifications',
-            'id_switches', 'avg_detections_per_frame', 'player_gallery_size'
+            'total_frames', 'total_detections', 'active_players', 
+            'disappeared_players', 'total_players_registered', 'used_ids',
+            'max_players', 'reidentifications', 'id_switches', 
+            'avg_detections_per_frame', 'player_gallery_size'
         ]
         
         for key in expected_keys:
             self.assertIn(key, stats)
+
+class TestVisualMemorySystem(unittest.TestCase):
+    
+    @patch('visual_memory.timm.create_model')
+    def test_visual_memory_initialization(self, mock_create_model):
+        mock_model = Mock()
+        # Mock the model to return a tensor with proper shape
+        mock_output = Mock()
+        mock_output.shape = (1, 768)  # Simulate EVA-02 output shape
+        mock_model.return_value = mock_output
+        mock_create_model.return_value = mock_model
+        
+        # Test initialization
+        vm = VisualMemorySystem()
+        
+        self.assertEqual(vm.memory_size, 50)
+        self.assertEqual(vm.max_memory_age, 300.0)
+        self.assertEqual(len(vm.player_memories), 0)
+        self.assertEqual(vm.next_player_id, 0)
+        self.assertEqual(vm.embedding_dim, 768)
+    
+    @patch('visual_memory.timm.create_model')
+    def test_create_new_player_id(self, mock_create_model):
+        mock_model = Mock()
+        # Mock the model to return a tensor with proper shape
+        mock_output = Mock()
+        mock_output.shape = (1, 768)
+        mock_model.return_value = mock_output
+        mock_create_model.return_value = mock_model
+        
+        vm = VisualMemorySystem()
+        
+        # Test ID creation
+        id1 = vm.create_new_player_id()
+        id2 = vm.create_new_player_id()
+        
+        self.assertEqual(id1, 0)
+        self.assertEqual(id2, 1)
+        self.assertEqual(vm.next_player_id, 2)
+    
+    @patch('visual_memory.timm.create_model')
+    def test_memory_statistics(self, mock_create_model):
+        mock_model = Mock()
+        # Mock the model to return a tensor with proper shape
+        mock_output = Mock()
+        mock_output.shape = (1, 768)
+        mock_model.return_value = mock_output
+        mock_create_model.return_value = mock_model
+        
+        vm = VisualMemorySystem()
+        
+        stats = vm.get_memory_statistics()
+        
+        expected_keys = [
+            'total_players', 'total_embeddings', 'avg_embeddings_per_player',
+            'memory_size_limit'
+        ]
+        
+        for key in expected_keys:
+            self.assertIn(key, stats)
+    
+    @patch('visual_memory.timm.create_model')
+    def test_embedding_extraction(self, mock_create_model):
+        mock_model = Mock()
+        # Mock the model to return a tensor with proper shape
+        mock_output = Mock()
+        mock_output.shape = (1, 768)
+        mock_output.cpu.return_value.numpy.return_value = np.random.rand(1, 768)
+        mock_model.return_value = mock_output
+        mock_create_model.return_value = mock_model
+        
+        vm = VisualMemorySystem()
+        
+        # Test embedding extraction
+        test_frame = np.random.randint(0, 255, (480, 640, 3), dtype=np.uint8)
+        test_bbox = (100, 100, 200, 300)
+        
+        embedding, confidence = vm.extract_visual_embedding(test_frame, test_bbox)
+        
+        self.assertEqual(len(embedding), 768)
+        self.assertIsInstance(confidence, float)
+        self.assertTrue(0.0 <= confidence <= 1.0)
+    
+    @patch('visual_memory.timm.create_model')
+    def test_player_recognition(self, mock_create_model):
+        mock_model = Mock()
+        # Mock the model to return a tensor with proper shape
+        mock_output = Mock()
+        mock_output.shape = (1, 768)
+        mock_output.cpu.return_value.numpy.return_value = np.random.rand(1, 768)
+        mock_model.return_value = mock_output
+        mock_create_model.return_value = mock_model
+        
+        vm = VisualMemorySystem()
+        
+        # Test player recognition with no stored memories
+        test_frame = np.random.randint(0, 255, (480, 640, 3), dtype=np.uint8)
+        test_bbox = (100, 100, 200, 300)
+        
+        player_id, score = vm.recognize_player(test_frame, test_bbox, threshold=0.75)
+        
+        # Should return None when no memories exist
+        self.assertIsNone(player_id)
+        self.assertEqual(score, 0.0)
 
 if __name__ == '__main__':
     unittest.main()
