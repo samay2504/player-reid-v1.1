@@ -108,7 +108,7 @@ This project integrates a human-like visual memory system for robust player re-i
 
 ### 1. Clone the Repository
 ```bash
-git clone [<repository-url>](https://github.com/samay2504/player-reid-v1.1)
+git clone https://github.com/samay2504/player-reid-v1.1
 cd player-reid
 ```
 
