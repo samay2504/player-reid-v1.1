@@ -2,8 +2,7 @@
 
 ⚠️ The YOLO model file (`best.pt`, ~185MB) is not included in this repository 
 due to size limitations. You can download it from:
-[Google Drive Link - best.pt](https://drive.google.com/file/d/
-1-5fOSHOSB9UXyP_enOoZNAMScrePVcMD/view)
+[Google Drive Link - best.pt](https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePVcMD/view)
 
 A production-grade player tracking and re-identification system for sports footage, featuring human-like visual memory using EVA-02 vision transformer. This system was developed to solve the assignment: **Re-identification in a Single Feed**.
 
@@ -109,7 +108,7 @@ This project integrates a human-like visual memory system for robust player re-i
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/samay2504/player-reid-v1.1)
 cd player-reid
 ```
 
